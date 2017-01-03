@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{45F03809-6444-4037-8350-83367BD0811C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Services/iOSProfilePhotoOnly.cs">
+    <Files>
+      <File FileName="ThoughtsAndPrayers/Interfaces/IDisplayProfilePicture.cs" Line="24" Column="2" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/ProfilePage.cs" Line="8" Column="10" />
+      <File FileName="iOS/Services/iOSProfilePhoto.cs" Line="20" Column="3" />
+      <File FileName="iOS/Services/iOSLoginProvider.cs" Line="20" Column="4" />
+      <File FileName="ThoughtsAndPrayers/Interfaces/ILoginProvider.cs" Line="1" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="35" Column="35" />
+      <File FileName="ThoughtsAndPrayers/MasterDetailPages/SideMasterPage.cs" Line="39" Column="18" />
+      <File FileName="iOS/Services/iOSProfilePhotoOnly.cs" Line="15" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ThoughtsAndPrayers" expanded="True">
+            <Node name="ThoughtsAndPrayers" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+              <Node name="MasterDetailPages" expanded="True" />
+              <Node name="MenuPages" expanded="True" />
+            </Node>
+            <Node name="ThoughtsAndPrayers.iOS" expanded="True">
+              <Node name="References" expanded="True">
+                <Node name="From Packages" expanded="True" />
+              </Node>
+              <Node name="ComponentReferenceFolder" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="iOSProfilePhotoOnly.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="iOS/Services/iOSLoginProvider.cs" line="18" offsetX="532" offsetY="272" expression="RootView" liveUpdate="False" />
+    <Watch file="iOS/Services/iOSLoginProvider.cs" line="18" offsetX="532" offsetY="272" expression="RootView" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.ThoughtsAndPrayers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.491ACA91-CE4D-44EE-B323-F33F6C86E2B4" />
+</Properties>
