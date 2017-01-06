@@ -40,11 +40,11 @@ namespace ThoughtsAndPrayers
 				TargetType = typeof (TodoListPage)
 			});
 
-			//masterPageItems.Add (new SideMasterPageItem {
-			//	Title = "Profile",
-			//	IconSource = "todo.png",
-			//	TargetType = typeof (ProfilePage)
-			//});
+			masterPageItems.Add (new SideMasterPageItem {
+				Title = "Profile",
+				IconSource = "todo.png",
+				TargetType = typeof (ProfilePage)
+			});
 
 			listView = new ListView {
 				BackgroundColor = MyColors.PurpleBrown,

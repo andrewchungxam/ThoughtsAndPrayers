@@ -111,6 +111,11 @@ namespace ThoughtsAndPrayers
 			//				//TODO: implement favorites
 			//				//fav.SetBinding (Image.IsVisibleProperty, "IsFavorite");
 
+			var image = new Image {
+
+
+			};
+
 			var text = new StackLayout {
 				Orientation = StackOrientation.Vertical,
 				Padding = new Thickness (0, 0, 0, 0),

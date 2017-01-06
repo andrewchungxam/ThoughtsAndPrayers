@@ -8,6 +8,11 @@ namespace ThoughtsAndPrayers
 		public static bool IsCurrent = false;
 		public static bool NeedsUpdating = false;
 		public static bool Authenticated = false;
+		public static string FBIdentityID;
+
+		public static string FBAccessToken;
+		public static string FBFullName;
+
 	}
 }
 

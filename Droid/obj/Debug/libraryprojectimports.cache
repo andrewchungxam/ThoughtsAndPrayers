@@ -2,14 +2,14 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Microsoft.WindowsAzure.Mobile.Ext/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.core/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.provider.e_sqlite3/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.lib.e_sqlite3/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.batteries_green/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Plugin.Connectivity/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Microsoft.WindowsAzure.Mobile.Ext/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.core/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.provider.e_sqlite3/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.lib.e_sqlite3/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.batteries_green/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Plugin.Connectivity/library_project_imports/res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/assets</ResolvedAssetDirectory>
@@ -23,13 +23,13 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Microsoft.WindowsAzure.Mobile.Ext.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.core.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.provider.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.lib.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.batteries_green.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/andrewc/Projects/aCseFolder/sample_demo_app/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Microsoft.WindowsAzure.Mobile.Ext.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.core.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.provider.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.lib.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/SQLitePCLRaw.batteries_green.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/andrewc/Github/ThoughtsAndPrayers/Droid/obj/Debug/__library_projects__/Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

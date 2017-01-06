@@ -100,17 +100,38 @@ namespace ThoughtsAndPrayers
 			loginButton.Text = "Facebook Login";
 			//loginButton.WidthRequest = 50;
 
-			loginButton.Clicked += (sender, e) => 
+			//loginButton.Clicked += (sender, e) => 
 			
-			{
-				if (AppConstants.Authenticated == false) 
-				{
-					Device.BeginInvokeOnMainThread (NextMethod ());
-				} 
-				else 				
-				{ 
+			//{
+			//	if (AppConstants.Authenticated == false) 
+			//	{
+			//		Device.BeginInvokeOnMainThread (NextMethod ());
+			//	} 
+			//	else 				
+			//	{ 
+			//		Navigation.PushModalAsync (new StartingMasterDetailPage ());
+			//	}
+
+			loginButton.Clicked += async (sender, e) => {
+				if (AppConstants.Authenticated == false) {
+					if (App.Authenticator != null) {
+						AppConstants.Authenticated = await App.Authenticator.Authenticate ();
+						if (AppConstants.Authenticated) {
+
+							//great but not too many Dependency service
+							//var  userinfo = await DependencyService.Get<IFacebookID> ().GetFacebookIdAsync ();
+
+							//AppConstants.FBIdentityID = userinfo;
+
+
+
+							//int j =10;
+						}
+					}
+				} else {
 					Navigation.PushModalAsync (new StartingMasterDetailPage ());
 				}
+
 
 
 			};

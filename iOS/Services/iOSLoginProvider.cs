@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
 using ThoughtsAndPrayers;
@@ -18,8 +19,16 @@ namespace ThoughtsAndPrayers.iOS
 
 		public async Task LoginAsync (MobileServiceClient client)
 		{
+			var test = await client.LoginAsync (RootView, "facebook");
+			string userIDString = test.UserId;
+			Debug.WriteLine ("The user ID String is {0}.", userIDString);
+
+
 			await client.LoginAsync (RootView, "facebook");
 			//var test = await client.LoginAsync(
+
+
+
 		}
 
 	}
