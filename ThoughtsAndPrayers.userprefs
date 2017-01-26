@@ -1,31 +1,22 @@
 ﻿<Properties StartupConfiguration="{45F03809-6444-4037-8350-83367BD0811C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ThoughtsAndPrayers/MasterDetailPages/StartingMasterDetailPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
     <Files>
-      <File FileName="iOS/AppDelegate.cs" Line="78" Column="23" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/IFacebookID.cs" Line="27" Column="8" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/EmptyInterface.cs" Line="1" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/IAuthenticate.cs" Line="1" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/ICloudService.cs" Line="1" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/ICloudTable.cs" Line="1" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/IDisplayProfilePicture.cs" Line="23" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/ILoginProvider.cs" Line="1" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/IPrayerRequestService.cs" Line="1" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/IProfilePhoto.cs" Line="1" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/ISurveyQuestionService.cs" Line="1" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/TableData.cs" Line="1" Column="1" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/ProfilePage.cs" Line="81" Column="1" />
-      <File FileName="ThoughtsAndPrayers/MasterDetailPages/StartingMasterDetailPage.cs" Line="73" Column="1" />
+      <File FileName="ThoughtsAndPrayers/Models/SurveyQuestion.cs" Line="25" Column="1" />
+      <File FileName="ThoughtsAndPrayers/Pages/AddTapPage.cs" Line="105" Column="7" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" Line="132" Column="17" />
+      <File FileName="ThoughtsAndPrayers/Constants/AppConstants.cs" Line="14" Column="47" />
+      <File FileName="ThoughtsAndPrayers/Models/SurveyResponse.cs" Line="1" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="68" Column="65" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ProfilePage.cs" line="38" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="iOS/Services/iOSLoginProvider.cs" line="18" offsetX="532" offsetY="272" expression="RootView" liveUpdate="False" />
     <Watch file="iOS/Services/iOSLoginProvider.cs" line="18" offsetX="532" offsetY="272" expression="RootView" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.ThoughtsAndPrayers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.491ACA91-CE4D-44EE-B323-F33F6C86E2B4" />
+  <MonoDevelop.Ide.ItemProperties.ThoughtsAndPrayers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.82474FAE-F9A8-4E87-92E3-5BCF83B0465E" />
 </Properties>

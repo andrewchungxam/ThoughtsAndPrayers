@@ -61,6 +61,11 @@ namespace ThoughtsAndPrayers.iOS
 			string debugString2 = string.Format ("Local Facebook Id is {0}", localfbID);
 
 			ThoughtsAndPrayers.AppConstants.FBIdentityID = localfbID;
+
+			string fbURLString = String.Format ("http://graph.facebook.com/{0}/picture?type=normal", localfbID);
+
+			//var fbURI = new Uri (fbURLString);
+			ThoughtsAndPrayers.AppConstants.FullURLPlusFBIdentityID = fbURLString;  //fbURI;
 			Debug.WriteLine (string.Format ("AdditionalData TAP Constants {0}", ThoughtsAndPrayers.AppConstants.FBIdentityID));
 			Debug.WriteLine (debugString2);
 

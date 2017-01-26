@@ -8,7 +8,7 @@ namespace ThoughtsAndPrayers
 	public class AddTapPage : ContentPage
 	{
 
-		Label prompt = new Label () { Text = "What your question?                " };
+		Label prompt = new Label () { Text = "Update: What your question?                " };
 
 		Editor myQuestion = new Editor {
 			BackgroundColor = MyColors.MyLightPurple
@@ -100,7 +100,9 @@ namespace ThoughtsAndPrayers
 						FirstName = firstName.Text,
 						LastName = lastName.Text,
 						FullName = String.Format("{0} {1}", firstName.Text, lastName.Text),
-						SharedText = mySharedText.Text
+						SharedText = mySharedText.Text, //this is the field that gets updated in Azure,
+						FBProfileUrl = AppConstants.FullURLPlusFBIdentityID
+						                         
 					};
 
 

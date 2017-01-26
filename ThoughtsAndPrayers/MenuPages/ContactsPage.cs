@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,8 +14,10 @@ namespace ThoughtsAndPrayers
 
 	class newNativeCell : ViewCell
 	{
-		Label firstName, label;
+		Label firstName, label, dateLabel, tempLabel;
+		string localFBString;
 		StackLayout layout;
+
 		public newNativeCell ()
 		{
 
@@ -111,24 +114,110 @@ namespace ThoughtsAndPrayers
 			//				//TODO: implement favorites
 			//				//fav.SetBinding (Image.IsVisibleProperty, "IsFavorite");
 
-			var image = new Image {
 
+			tempLabel = new Label {VerticalTextAlignment = TextAlignment.Center };
+			tempLabel.SetBinding (Label.TextProperty, "FBProfileUrl");
 
+			localFBString = String.Format ("http://graph.facebook.com/165706980572556/picture?type=normal"); //{0}/picture?type=normal", tempLabel.Text);
+
+			//if (tempLabel.Text != null) 
+			//{
+			//	localFBString = String.Format ("http://graph.facebook.com/{0}/picture?type=normal", tempLabel.Text);
+			//} 
+			//else 
+			//{ 
+			//	localFBString = String.Format ("http://graph.facebook.com/165706980572555/picture?type=normal", tempLabel.Text);
+			//}
+
+			//PLACEHOLDER
+			var profileImage = new Image {
+				//Source =   ImageSource.FromUri (new Uri("http://graph.facebook.com/165706980572556/picture?type=normal"))
+				//			Source = ImageSource.FromUri (new Uri (localFBString))
+				//Source = localFBString
 			};
+
+			profileImage.SetBinding (Image.SourceProperty, "FBProfileUrl");
+
+//			profileImage.SetBinding (Image.SourceProperty, "FullURIFBProfileUrl");
+
+			////TEXT - shared prayer request
+			//var sampleDateTime = DateTime.Today;
+			////string sampleDateTimeString = Convert.ToString (sampleDateTime);
+			//CultureInfo ci = new CultureInfo ("en-US");
+			//string sampleDateTimeString = sampleDateTime.ToString ("MMM d", ci);
+
+			//TEXT - shared prayer request
+			string theDateTime = "01/28/2008 14:50:50.42";
+			DateTime dt = Convert.ToDateTime (theDateTime);
+			CultureInfo ci = new CultureInfo ("en-US");
+
+			string sampleDateTimeString = dt.ToString ("MMM d", ci);
+
+			//Also above can be done more formally like this:
+			//https://msdn.microsoft.com/en-us/library/cc165448.aspx
+
+//			var dateLabel = new Label {
+			dateLabel = new Label {
+				//Text = "hello"
+				Text = sampleDateTimeString,
+				FontAttributes = FontAttributes.Italic,
+				FontSize = Device.GetNamedSize (NamedSize.Small, typeof (Label)),
+				TextColor = Color.Gray
+			}; 
+
+
+			//Need a date and time data point (simple) - let's just do (month & year) Nov 9th
+
+			//string URLNormal = String.Format ("http://graph.facebook.com/{0}/picture?type=normal", _profileId);
+			//string URLSquare = String.Format ("http://graph.facebook.com/{0}/picture?type=square", _profileId);
+			//string URLSmall = String.Format ("http://graph.facebook.com/{0}/picture?type=small", _profileId);
+
+			//string fullNameString = AppConstants.FBFullName;
+
+			//Label fullNameLabel = new Label ();
+			//fullNameLabel.Text = fullNameString;
+
+			//var webImage = new Image { Aspect = Aspect.AspectFit };
+			//webImage.Source = ImageSource.FromUri (new Uri (URLLarge));
+
+			////webImage.Source = ImageSource.FromUri (new Uri ("https://xamarin.com/content/images/pages/forms/example-app.png"));
+
+			////webImage.Source = ImageSource.FromUri (new Uri ("http://graph.facebook.com/v2.2/423402/picture"));
+
+			//var webImage2 = new Image { Aspect = Aspect.AspectFit };
+			//webImage2.Source = ImageSource.FromUri (new Uri (URLNormal));//new Uri ("http://graph.facebook.com/423402/picture?type=large"));
+
+			var imageStackLayout = new StackLayout {
+				Orientation = StackOrientation.Vertical,
+				Padding = new Thickness (0, 0, 0, 0),
+				//HorizontalOptions = LayoutOptions.StartAndExpand,
+				Children = { profileImage } // label, dateLabel }
+												//Children = { firstName, label }
+			};
+
+
 
 			var text = new StackLayout {
 				Orientation = StackOrientation.Vertical,
 				Padding = new Thickness (0, 0, 0, 0),
 				HorizontalOptions = LayoutOptions.StartAndExpand,
-				Children = { label }
+				Children = { label, dateLabel, tempLabel } // label, dateLabel }
 				//Children = { firstName, label }
 			};
 
+			//	var text = new StackLayout {
+			//	Orientation = StackOrientation.Horizontal,
+			//	Padding = new Thickness (0, 0, 0, 0),
+			//	HorizontalOptions = LayoutOptions.StartAndExpand,
+			//	Children = { dateLabel, label } // label, dateLabel }
+			//							 //Children = { firstName, label }
+			//};
+
 			layout = new StackLayout {
-				Padding = new Thickness (10, 10, 0, 10),
+				Padding = new Thickness (10, 10, 5, 10),
 				Orientation = StackOrientation.Horizontal,
 				HorizontalOptions = LayoutOptions.StartAndExpand,
-				Children = { text } //, fav }
+				Children = { imageStackLayout, text } // profileImage, text }//, dateLabel}//, dateLabel } //, fav }
 			};
 
 			View = layout;
