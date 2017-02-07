@@ -86,10 +86,12 @@ namespace ThoughtsAndPrayers
 
 //Works with a submit button
 					String introQuestion = "Question - hi there";
-					DateTime timeNow = DateTime.Now;
-					var culture = new CultureInfo ("en-US");
-					String stringTimeNow = timeNow.ToString (culture);
+					DateTime dt = DateTime.Now;
+					//var culture = new CultureInfo ("en-US");
+					//String stringTimeNow = timeNow.ToString (culture);
 
+					CultureInfo ci = new CultureInfo ("en-US");
+					string sampleDateTimeString = dt.ToString ("MMM d", ci);
 
 					SurveyQuestion oneSurveyQuestion = new SurveyQuestion () {
 						Id = randomNumber,
@@ -99,10 +101,10 @@ namespace ThoughtsAndPrayers
 
 						FirstName = firstName.Text,
 						LastName = lastName.Text,
-						FullName = String.Format("{0} {1}", firstName.Text, lastName.Text),
+						FullName = String.Format ("{0} {1}", firstName.Text, lastName.Text),
 						SharedText = mySharedText.Text, //this is the field that gets updated in Azure,
-						FBProfileUrl = AppConstants.FullURLPlusFBIdentityID
-						                         
+						FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
+						CreateDateString = sampleDateTimeString                     
 					};
 
 

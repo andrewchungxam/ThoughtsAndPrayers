@@ -23,6 +23,8 @@ namespace ThoughtsAndPrayers
 		public string NewText { get; set; }
 		public string FBProfileUrl { get; set; }
 
+		public string CreateDateString { get; set; }
+
 
 		public override string ToString ()
 		{

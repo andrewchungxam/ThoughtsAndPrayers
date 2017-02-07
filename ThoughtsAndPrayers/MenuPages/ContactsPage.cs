@@ -138,7 +138,7 @@ namespace ThoughtsAndPrayers
 
 			profileImage.SetBinding (Image.SourceProperty, "FBProfileUrl");
 
-//			profileImage.SetBinding (Image.SourceProperty, "FullURIFBProfileUrl");
+			//			profileImage.SetBinding (Image.SourceProperty, "FullURIFBProfileUrl");
 
 			////TEXT - shared prayer request
 			//var sampleDateTime = DateTime.Today;
@@ -147,10 +147,12 @@ namespace ThoughtsAndPrayers
 			//string sampleDateTimeString = sampleDateTime.ToString ("MMM d", ci);
 
 			//TEXT - shared prayer request
-			string theDateTime = "01/28/2008 14:50:50.42";
-			DateTime dt = Convert.ToDateTime (theDateTime);
-			CultureInfo ci = new CultureInfo ("en-US");
+			//string theDateTime = "01/28/2008 14:50:50.42";
+			//DateTime dt = Convert.ToDateTime (theDateTime);
 
+			DateTime dt = DateTime.Now;
+
+			CultureInfo ci = new CultureInfo ("en-US");
 			string sampleDateTimeString = dt.ToString ("MMM d", ci);
 
 			//Also above can be done more formally like this:

@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{45F03809-6444-4037-8350-83367BD0811C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ThoughtsAndPrayers/Pages/SamplePage.cs">
     <Files>
       <File FileName="ThoughtsAndPrayers/Models/SurveyQuestion.cs" Line="25" Column="1" />
       <File FileName="ThoughtsAndPrayers/Pages/AddTapPage.cs" Line="105" Column="7" />
@@ -7,7 +7,9 @@
       <File FileName="ThoughtsAndPrayers/Constants/AppConstants.cs" Line="14" Column="47" />
       <File FileName="ThoughtsAndPrayers/Models/SurveyResponse.cs" Line="1" Column="1" />
       <File FileName="iOS/AppDelegate.cs" Line="68" Column="65" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="iOS/Main.cs" Line="6" Column="1" />
+      <File FileName="ThoughtsAndPrayers/Pages/SamplePage.cs" Line="168" Column="1" />
+      <File FileName="ThoughtsAndPrayers/Pages/SampleTwoPage.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -18,5 +20,5 @@
     <Watch file="iOS/Services/iOSLoginProvider.cs" line="18" offsetX="532" offsetY="272" expression="RootView" liveUpdate="False" />
     <Watch file="iOS/Services/iOSLoginProvider.cs" line="18" offsetX="532" offsetY="272" expression="RootView" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.ThoughtsAndPrayers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.82474FAE-F9A8-4E87-92E3-5BCF83B0465E" />
+  <MonoDevelop.Ide.ItemProperties.ThoughtsAndPrayers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.491ACA91-CE4D-44EE-B323-F33F6C86E2B4" />
 </Properties>

@@ -158,6 +158,9 @@ namespace ThoughtsAndPrayers
 	
 		}
 
+
+
+
 		class NativeCell : ViewCell
 		{
 			Label firstName, label;
