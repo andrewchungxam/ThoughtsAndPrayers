@@ -36,8 +36,8 @@
     <Compile Include="Data\SeedData.cs" />
     <Compile Include="Pages\TheTabbedPage.cs" />
     <Compile Include="Pages\ThoughtAndPrayerDetailPage.cs" />
-    <Compile Include="Pages\SampleTwoPage.cs" />
-    <Compile Include="Pages\SamplePage.cs" />
+    <Compile Include="Pages\DELETE_SampleTwoPage.cs" />
+    <Compile Include="Pages\DELETE_SamplePage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\AddTapPage.cs" />
     <Compile Include="MasterDetailPages\StartingMasterDetailPage.cs" />

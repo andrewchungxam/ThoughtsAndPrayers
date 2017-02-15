@@ -39,7 +39,7 @@ namespace ThoughtsAndPrayers
 			//ContextActions.Add (moreAction);
 			//ContextActions.Add (deleteAction);
 
-			var prayerAction = new MenuItem { Text = "Prayers", IsDestructive = true };
+			var prayerAction = new MenuItem { Text = "Delete", IsDestructive = true };
 			prayerAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
 			prayerAction.Clicked += async (sender, e) => {
 				var mi = ((MenuItem)sender);
@@ -55,15 +55,17 @@ namespace ThoughtsAndPrayers
 
 			};
 
-			var thoughtAction = new MenuItem { Text = "Thoughts", IsDestructive = true }; // red background
+			var thoughtAction = new MenuItem { Text = "T&P" };//, IsDestructive = true }; // red background
 			thoughtAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
 			thoughtAction.Clicked += async (sender, e) => {
 				var mi = ((MenuItem)sender);
 				Debug.WriteLine ("Delete Context Action clicked: " + ((SurveyQuestion)mi.CommandParameter).SharedText);
 
-				await App.Service.DeleteSurveyResponseAsync ((ThoughtsAndPrayers.SurveyResponse)mi.CommandParameter);
+				await App.Service.DeleteSurveyQuestionAsync ((SurveyQuestion)mi.CommandParameter);
 
 				AppConstants.NeedsUpdating = true;
+				MessagingCenter.Send<object> (this, "RefreshData");
+
 			};
 			// add to the ViewCell's ContextActions property
 			ContextActions.Add (prayerAction);
