@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{45F03809-6444-4037-8350-83367BD0811C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ThoughtsAndPrayers/Pages/SamplePage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
     <Files>
-      <File FileName="ThoughtsAndPrayers/Models/SurveyQuestion.cs" Line="25" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Pages/AddTapPage.cs" Line="105" Column="7" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" Line="132" Column="17" />
+      <File FileName="ThoughtsAndPrayers/Models/SurveyQuestion.cs" Line="26" Column="47" />
+      <File FileName="ThoughtsAndPrayers/Pages/AddTapPage.cs" Line="99" Column="14" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" Line="153" Column="1" />
       <File FileName="ThoughtsAndPrayers/Constants/AppConstants.cs" Line="14" Column="47" />
       <File FileName="ThoughtsAndPrayers/Models/SurveyResponse.cs" Line="1" Column="1" />
       <File FileName="iOS/AppDelegate.cs" Line="68" Column="65" />
