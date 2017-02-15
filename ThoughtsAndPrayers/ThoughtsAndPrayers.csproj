@@ -76,6 +76,7 @@
     <Compile Include="Interfaces\EmptyInterface.cs" />
     <Compile Include="Interfaces\IProfilePhoto.cs" />
     <Compile Include="Interfaces\IFacebookID.cs" />
+    <Compile Include="Models\ThinkingOfYou.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

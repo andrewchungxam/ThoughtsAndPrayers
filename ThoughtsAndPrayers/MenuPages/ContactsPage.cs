@@ -18,8 +18,34 @@ namespace ThoughtsAndPrayers
 		string localFBString;
 		StackLayout layout;
 
+
+
 		public newNativeCell ()
 		{
+			//MOVING DATE DATE UP
+			////TEXT - shared prayer request
+			//var sampleDateTime = DateTime.Today;
+			////string sampleDateTimeString = Convert.ToString (sampleDateTime);
+			//CultureInfo ci = new CultureInfo ("en-US");
+			//string sampleDateTimeString = sampleDateTime.ToString ("MMM d", ci);
+
+			//TEXT - shared prayer request
+			//string theDateTime = "01/28/2008 14:50:50.42";
+			//DateTime dt = Convert.ToDateTime (theDateTime);
+
+			DateTime dt = DateTime.Now;
+
+			CultureInfo ci = new CultureInfo ("en-US");
+			string sampleDateTimeString = dt.ToString ("MMM d", ci);
+
+			//Also above can be done more formally like this:
+			//https://msdn.microsoft.com/en-us/library/cc165448.aspx
+
+
+
+
+
+
 
 
 			//var moreAction = new MenuItem { Text = "More" };
@@ -55,6 +81,9 @@ namespace ThoughtsAndPrayers
 
 			};
 
+
+
+
 			var thoughtAction = new MenuItem { Text = "T&P" };//, IsDestructive = true }; // red background
 			thoughtAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
 			thoughtAction.Clicked += async (sender, e) => {
@@ -62,8 +91,84 @@ namespace ThoughtsAndPrayers
 				Debug.WriteLine ("Delete Context Action clicked: " + ((SurveyQuestion)mi.CommandParameter).SharedText);
 
 				await App.Service.DeleteSurveyQuestionAsync ((SurveyQuestion)mi.CommandParameter);
-
 				AppConstants.NeedsUpdating = true;
+
+				//test
+
+				System.Random random = new Random ();
+				string randomNumber = string.Join (string.Empty, Enumerable.Range (0, 10).Select (number => random.Next (0, 5).ToString ()));
+
+
+
+				SurveyQuestion oneSurveyQuestion = new SurveyQuestion () {
+
+
+
+
+					Id = randomNumber,
+					//						Id = "1234567891234",
+					Question = "Test question", //myQuestion.Text, // String.Format ("{0} at {1}", introQuestion, stringTimeNow),
+					Answers = "Answer - hi there",
+
+					FirstName = "FirstName",
+					LastName = "LastName", //lastName.Text,
+					FullName = "FirstName LastName", //String.Format ("{0} {1}", firstName, LastName),
+					SharedText = "Shared text", //mySharedText.Text, //this is the field that gets updated in Azure,
+					FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
+					CreateDateString = sampleDateTimeString
+				};
+				//additional_adding_this
+
+				App.Service.AddOrUpdateSurveyQuestionAsync (oneSurveyQuestion);
+				//App.Service.SynchronizeQuestionsAsync (oneSurveyQuestion.Id);
+				//AppConstants.NeedsUpdating == false;
+				AppConstants.NeedsUpdating = true;
+
+				//
+				ThinkingOfYou oneThinkingOfYou = new ThinkingOfYou () {
+					theId = randomNumber,
+
+			FirstName = "TestFirst",
+			LastName = "TestLast",
+			FullName = "TestFirst TestLast",
+			SharedText = "Test SharedText",
+			NewText = "Test NewText",
+			FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
+			CreateDateString = sampleDateTimeString,
+			CreateDateTimeString = sampleDateTimeString,
+
+		//			public string "WE NEED THE ID OF THE PRAYER REQUEST"
+		//IE. each prayer request needs an ID
+		//THEN on the page, we want to filter by that ID
+
+			theFBID = AppConstants.FBIdentityID,
+			thePrayerRequestId =  AppConstants.FBIdentityID
+
+					//Id = randomNumber,
+					////						Id = "1234567891234",
+					//Question = "Test question", //myQuestion.Text, // String.Format ("{0} at {1}", introQuestion, stringTimeNow),
+					//Answers = "Answer - hi there",
+
+					//FirstName = "FirstName",
+					//LastName = "LastName", //lastName.Text,
+					//FullName = "FirstName LastName", //String.Format ("{0} {1}", firstName, LastName),
+					//SharedText = "Shared text", //mySharedText.Text, //this is the field that gets updated in Azure,
+					//FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
+					//CreateDateString = sampleDateTimeString
+				};
+				//additional_adding_this
+
+				App.Service.AddOrUpdateThinkingOfYouAsync (oneThinkingOfYou);
+
+				App.Service.AddOrUpdateSurveyQuestionAsync (oneSurveyQuestion);
+				//App.Service.SynchronizeQuestionsAsync (oneSurveyQuestion.Id);
+				//AppConstants.NeedsUpdating == false;
+				AppConstants.NeedsUpdating = true;
+
+
+
+
+
 				MessagingCenter.Send<object> (this, "RefreshData");
 
 			};
@@ -142,23 +247,8 @@ namespace ThoughtsAndPrayers
 
 			//			profileImage.SetBinding (Image.SourceProperty, "FullURIFBProfileUrl");
 
-			////TEXT - shared prayer request
-			//var sampleDateTime = DateTime.Today;
-			////string sampleDateTimeString = Convert.ToString (sampleDateTime);
-			//CultureInfo ci = new CultureInfo ("en-US");
-			//string sampleDateTimeString = sampleDateTime.ToString ("MMM d", ci);
 
-			//TEXT - shared prayer request
-			//string theDateTime = "01/28/2008 14:50:50.42";
-			//DateTime dt = Convert.ToDateTime (theDateTime);
 
-			DateTime dt = DateTime.Now;
-
-			CultureInfo ci = new CultureInfo ("en-US");
-			string sampleDateTimeString = dt.ToString ("MMM d", ci);
-
-			//Also above can be done more formally like this:
-			//https://msdn.microsoft.com/en-us/library/cc165448.aspx
 
 //			var dateLabel = new Label {
 			dateLabel = new Label {

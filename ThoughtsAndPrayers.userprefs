@@ -1,21 +1,21 @@
 ﻿<Properties StartupConfiguration="{45F03809-6444-4037-8350-83367BD0811C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ThoughtsAndPrayers/Services/AzureSurveyService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ThoughtsAndPrayers/Models/ThinkingOfYou.cs">
     <Files>
-      <File FileName="ThoughtsAndPrayers/Constants/AppConstants.cs" Line="14" Column="47" />
-      <File FileName="ThoughtsAndPrayers/Models/SurveyResponse.cs" Line="1" Column="1" />
-      <File FileName="iOS/AppDelegate.cs" Line="68" Column="65" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Pages/DELETE_SamplePage.cs" Line="218" Column="9" />
-      <File FileName="ThoughtsAndPrayers/Pages/DELETE_SampleTwoPage.cs" Line="1" Column="1" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/MyTabbedPage.cs" Line="16" Column="35" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" Line="48" Column="31" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/ISurveyQuestionService.cs" Line="7" Column="37" />
-      <File FileName="ThoughtsAndPrayers/Services/AzureSurveyService.cs" Line="15" Column="36" />
+      <File FileName="ThoughtsAndPrayers/Services/AzureSurveyService.cs" Line="175" Column="42" />
+      <File FileName="iOS/AppDelegate.cs" Line="136" Column="1" NotebookId="1" />
+      <File FileName="ThoughtsAndPrayers/Pages/LoginPage.cs" Line="1" Column="5" NotebookId="1" />
+      <File FileName="ThoughtsAndPrayers/Models/ThinkingOfYou.cs" Line="10" Column="4" NotebookId="1" />
+      <File FileName="ThoughtsAndPrayers/Models/SurveyQuestion.cs" Line="24" Column="7" NotebookId="1" />
+      <File FileName="ThoughtsAndPrayers/Models/SurveyResponse.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/Services/AzureSurveyService.cs" line="50" column="1" />
+      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/iOS/AppDelegate.cs" line="133" column="1" />
+      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/Pages/LoginPage.cs" line="196" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="iOS/Services/iOSLoginProvider.cs" line="18" offsetX="532" offsetY="272" expression="RootView" liveUpdate="False" />

@@ -42,6 +42,8 @@ namespace ThoughtsAndPrayers
 		MobileServiceClient client;
 		IMobileServiceSyncTable<SurveyQuestion> questionsTable;
 		IMobileServiceSyncTable<SurveyResponse> responseTable;
+		IMobileServiceSyncTable<ThinkingOfYou> thinkingOfYouTable;
+
 		string lastQuestionId;
 
 		//void Initialize ()
@@ -63,12 +65,14 @@ namespace ThoughtsAndPrayers
 
 			store.DefineTable<SurveyQuestion> ();
 			store.DefineTable<SurveyResponse> ();
+			store.DefineTable<ThinkingOfYou> ();
 
 			client = new MobileServiceClient (AzureUrl);
 			await client.SyncContext.InitializeAsync (store, new MobileServiceSyncHandler ());
 
 			questionsTable = client.GetSyncTable<SurveyQuestion> ();
 			responseTable = client.GetSyncTable<SurveyResponse> ();
+			thinkingOfYouTable = client.GetSyncTable<ThinkingOfYou> ();
 
 			if (CrossConnectivity.Current.IsConnected) {
 
@@ -261,6 +265,94 @@ namespace ThoughtsAndPrayers
 				.OrderByDescending (r => r.UpdatedAt)
 				.Take (100).ToEnumerableAsync ();
 		}
+
+		public async Task AddOrUpdateThinkingOfYouAsync (ThinkingOfYou thinkingOfYou)
+		{
+
+			await InitializeAsync ();
+			//			throw new NotImplementedException ();
+			//if (string.IsNullOrEmpty (question.Id)) {
+			//	await questionsTable.InsertAsync (question);
+			//}
+			await thinkingOfYouTable.InsertAsync (thinkingOfYou);
+			System.Diagnostics.Debug.WriteLine ("Pending operations in the sync context queue: {0}", client.SyncContext.PendingOperations);
+
+
+			//var localItems = await questionsTable.Select (i => i.Answers).ToListAsync();
+			//System.Diagnostics.Debug.WriteLine ("Local table): { 0}", string.Join (", ", localItems));
+
+			//			await client.SyncContext.PushAsync ();
+
+			await SynchronizeThinkingOfYouAsync (thinkingOfYou.theId);//(response.SurveyQuestionId);
+			System.Diagnostics.Debug.WriteLine ("Pending operations in the sync context queue: {0}", client.SyncContext.PendingOperations);
+
+			//throw new NotImplementedException ();
+		}
+
+		public async Task DeleteSurveyThinkingOfYouAsync (ThinkingOfYou thinkingOfYou)
+		{
+
+			await InitializeAsync ();
+			//			throw new NotImplementedException ();
+			//if (string.IsNullOrEmpty (question.Id)) {
+			//	await questionsTable.InsertAsync (question);
+			//}
+			await thinkingOfYouTable.DeleteAsync (thinkingOfYou);
+			System.Diagnostics.Debug.WriteLine ("Pending operations in the sync context queue: {0}", client.SyncContext.PendingOperations);
+
+
+			//var localItems = await questionsTable.Select (i => i.Answers).ToListAsync();
+			//System.Diagnostics.Debug.WriteLine ("Local table): { 0}", string.Join (", ", localItems));
+
+			//			await client.SyncContext.PushAsync ();
+
+			await SynchronizeThinkingOfYouAsync (thinkingOfYou.theId);//(response.SurveyQuestionId);
+			System.Diagnostics.Debug.WriteLine ("Pending operations in the sync context queue: {0}", client.SyncContext.PendingOperations);
+
+
+			//throw new NotImplementedException ();
+		}
+
+		public async Task<IEnumerable<ThinkingOfYou>> GetThinkingOfYouAsync ()
+		{
+			//throw new NotImplementedException ();
+			await InitializeAsync ();
+			return await thinkingOfYouTable.ReadAsync ();
+
+		}
+
+		//NEW add a ResponsesAsync completing the above
+		async Task SynchronizeThinkingOfYouAsync (string questionId)
+		{
+			if (!CrossConnectivity.Current.IsConnected)
+				return;
+
+			try {
+				await client.SyncContext.PushAsync (); //after the reading - questionsTable.PullAsync ("syncQuestions" + questionId, questionsTable.Where (r => r.Id != null));
+				System.Diagnostics.Debug.WriteLine ("SynchronizeQuestionsAsync-Pending operations in the sync context queue: {0}", client.SyncContext.PendingOperations);
+
+
+				// HERE
+				//.Where (r => r.SurveyQuestionId == questionId)
+				//.OrderByDescending (r => r.UpdatedAt)
+				//.Take (100).ToEnumerableAsync ();
+
+				//.Where (r => r.SurveyQuestionId == questionId));
+
+			} catch (MobileServicePushFailedException ex) {
+				if (ex.PushResult != null) {
+					foreach (var result in ex.PushResult.Errors) {
+						await ResolveError (result);
+					}
+
+				}
+			} catch (Exception ex) {
+				Debug.WriteLine ("Got exception: {0}", ex.Message);
+			}
+
+
+		}
+
 	}
 }
 
