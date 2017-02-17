@@ -88,8 +88,9 @@ namespace ThoughtsAndPrayers
 			thoughtAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
 			thoughtAction.Clicked += async (sender, e) => {
 				var mi = ((MenuItem)sender);
-				Debug.WriteLine ("Delete Context Action clicked: " + ((SurveyQuestion)mi.CommandParameter).SharedText);
 
+
+				Debug.WriteLine ("Delete Context Action clicked: " + ((SurveyQuestion)mi.CommandParameter).SharedText);
 				await App.Service.DeleteSurveyQuestionAsync ((SurveyQuestion)mi.CommandParameter);
 				AppConstants.NeedsUpdating = true;
 
@@ -97,8 +98,6 @@ namespace ThoughtsAndPrayers
 
 				System.Random random = new Random ();
 				string randomNumber = string.Join (string.Empty, Enumerable.Range (0, 10).Select (number => random.Next (0, 5).ToString ()));
-
-
 
 				SurveyQuestion oneSurveyQuestion = new SurveyQuestion () {
 
