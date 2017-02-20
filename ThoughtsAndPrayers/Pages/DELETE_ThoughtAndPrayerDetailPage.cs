@@ -1,15 +1,64 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace ThoughtsAndPrayers
 {
 	public class ThoughtAndPrayerDetailPage : ContentPage
 	{
+		public List<ThinkingOfYou> thinkingOfYousList;
+		ListView thinkingOfYouListView;
+
 		public ThoughtAndPrayerDetailPage (SharedPrayerRequest tap)
 		//public ThoughtAndPrayerDetailPage (SurveyQuestion tap)
 		{
 			var fullName = new Label { Text = tap.FirstName };
 			var sharedText = new Label { Text = tap.SharedText };
+
+			System.Random random = new Random ();
+			string randomNumber = string.Join (string.Empty, Enumerable.Range (0, 10).Select (number => random.Next (0, 100).ToString ()));
+
+			int x = Convert.ToInt32 (randomNumber);
+			int y = x + 5;
+
+			string biggerRandomNumberString = y.ToString();
+
+			thinkingOfYousList = new List<ThinkingOfYou> ()
+			{
+				new ThinkingOfYou ()
+					{
+					id = randomNumber,
+					FirstName = "First",
+					LastName = "Last",
+					SharedText = "Shared Text",
+					NewText = "New Text",
+					FBProfileUrl = "1",
+					theFBID = "1",
+					thePrayerRequestId = "1"
+					},
+				new ThinkingOfYou ()
+					{
+					id = biggerRandomNumberString,
+					FirstName = "First",
+					LastName = "Last",
+					SharedText = "Shared Text",
+					NewText = "New Text",
+					FBProfileUrl = "1",
+					theFBID = "1",
+					thePrayerRequestId = "1"
+					}
+			};
+
+			thinkingOfYouListView = new ListView () {
+				BackgroundColor = Color.Blue
+			};
+
+			thinkingOfYouListView.ItemsSource = thinkingOfYousList;
+
+
+//			thinkingOfYous = (await App.Service.GetQuestionsAsync ()).ToList ();
+			//thinkingOfYous = App.Service.GetQuestionsAsync ().ToList ();
 
 			Content = new StackLayout 
 			{
@@ -17,7 +66,8 @@ namespace ThoughtsAndPrayers
 				Padding = new Thickness (20),
 
 				Children = { 
-					fullName //, sharedText
+					fullName, //, sharedText
+				//	thinkingOfYouListView
 				}
 
 			};

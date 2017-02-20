@@ -35,7 +35,7 @@
     <Compile Include="Models\SharedPrayerRequest.cs" />
     <Compile Include="Data\SeedData.cs" />
     <Compile Include="Pages\TheTabbedPage.cs" />
-    <Compile Include="Pages\ThoughtAndPrayerDetailPage.cs" />
+    <Compile Include="Pages\DELETE_ThoughtAndPrayerDetailPage.cs" />
     <Compile Include="Pages\DELETE_SampleTwoPage.cs" />
     <Compile Include="Pages\DELETE_SamplePage.cs" />
     <Compile Include="Pages\LoginPage.cs" />

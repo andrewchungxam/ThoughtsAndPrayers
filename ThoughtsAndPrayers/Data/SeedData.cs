@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ThoughtsAndPrayers
 {
@@ -34,6 +35,56 @@ namespace ThoughtsAndPrayers
 			};
 
 		}
+
+		public static IEnumerable<ThinkingOfYou> GetThinkingOfYous () //(string dataPartitionId)
+		{
+			//			dataPartitionId = dataPartitionId.ToUpper ();
+
+
+			System.Random random = new Random ();
+			string randomNumber = string.Join (string.Empty, Enumerable.Range (0, 10).Select (number => random.Next (0, 5).ToString ()));
+
+			//			int x = Convert.ToInt32 (randomNumber);
+
+			int theX;
+			Int32.TryParse (randomNumber, out theX);// (randomNumber);
+			int y = theX + 5;
+
+			string biggerRandomNumberString = y.ToString ();
+
+
+			return new List<ThinkingOfYou> ()
+			{
+				new ThinkingOfYou ()
+					{
+					id = randomNumber,
+					FirstName = "First",
+					LastName = "Last",
+					SharedText = "Shared Text",
+					NewText = "New Text",
+					FBProfileUrl = "1",
+					theFBID = "1",
+					thePrayerRequestId = "1"
+					},
+				new ThinkingOfYou ()
+					{
+					id = biggerRandomNumberString,
+					FirstName = "First",
+					LastName = "Last",
+					SharedText = "Shared Text",
+					NewText = "New Text",
+					FBProfileUrl = "1",
+					theFBID = "1",
+					thePrayerRequestId = "1"
+					}
+
+			};
+
+		}
+
+
+
+
 	}
 }
 

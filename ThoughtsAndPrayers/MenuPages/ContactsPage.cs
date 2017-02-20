@@ -89,39 +89,41 @@ namespace ThoughtsAndPrayers
 			thoughtAction.Clicked += async (sender, e) => {
 				var mi = ((MenuItem)sender);
 
-
-				Debug.WriteLine ("Delete Context Action clicked: " + ((SurveyQuestion)mi.CommandParameter).SharedText);
-				await App.Service.DeleteSurveyQuestionAsync ((SurveyQuestion)mi.CommandParameter);
-				AppConstants.NeedsUpdating = true;
+//cleanup 1
+//				Debug.WriteLine ("Delete Context Action clicked: " + ((SurveyQuestion)mi.CommandParameter).SharedText);
+//				await App.Service.DeleteSurveyQuestionAsync ((SurveyQuestion)mi.CommandParameter);
+//				AppConstants.NeedsUpdating = true;
+//cleanup 1
 
 				//test
 
 				System.Random random = new Random ();
 				string randomNumber = string.Join (string.Empty, Enumerable.Range (0, 10).Select (number => random.Next (0, 5).ToString ()));
 
-				SurveyQuestion oneSurveyQuestion = new SurveyQuestion () {
+//cleanup 2
+				//SurveyQuestion oneSurveyQuestion = new SurveyQuestion () {
+//cleanup 2
 
 
 
+				//	Id = randomNumber,
+				//	//						Id = "1234567891234",
+				//	Question = "Test question", //myQuestion.Text, // String.Format ("{0} at {1}", introQuestion, stringTimeNow),
+				//	Answers = "Answer - hi there",
 
-					Id = randomNumber,
-					//						Id = "1234567891234",
-					Question = "Test question", //myQuestion.Text, // String.Format ("{0} at {1}", introQuestion, stringTimeNow),
-					Answers = "Answer - hi there",
+				//	FirstName = "FirstName",
+				//	LastName = "LastName", //lastName.Text,
+				//	FullName = "FirstName LastName", //String.Format ("{0} {1}", firstName, LastName),
+				//	SharedText = "Shared text", //mySharedText.Text, //this is the field that gets updated in Azure,
+				//	FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
+				//	CreateDateString = sampleDateTimeString
+				//};
+				////additional_adding_this
 
-					FirstName = "FirstName",
-					LastName = "LastName", //lastName.Text,
-					FullName = "FirstName LastName", //String.Format ("{0} {1}", firstName, LastName),
-					SharedText = "Shared text", //mySharedText.Text, //this is the field that gets updated in Azure,
-					FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
-					CreateDateString = sampleDateTimeString
-				};
-				//additional_adding_this
-
-				App.Service.AddOrUpdateSurveyQuestionAsync (oneSurveyQuestion);
-				//App.Service.SynchronizeQuestionsAsync (oneSurveyQuestion.Id);
-				//AppConstants.NeedsUpdating == false;
-				AppConstants.NeedsUpdating = true;
+				//App.Service.AddOrUpdateSurveyQuestionAsync (oneSurveyQuestion);
+				////App.Service.SynchronizeQuestionsAsync (oneSurveyQuestion.Id);
+				////AppConstants.NeedsUpdating == false;
+				//AppConstants.NeedsUpdating = true;
 
 				//
 				ThinkingOfYou oneThinkingOfYou = new ThinkingOfYou () {
@@ -157,16 +159,15 @@ namespace ThoughtsAndPrayers
 				};
 				//additional_adding_this
 
-				App.Service.AddOrUpdateThinkingOfYouAsync (oneThinkingOfYou);
+				await App.Service.AddOrUpdateThinkingOfYouAsync (oneThinkingOfYou);
 
-				App.Service.AddOrUpdateSurveyQuestionAsync (oneSurveyQuestion);
+//cleanup 3
+//				App.Service.AddOrUpdateSurveyQuestionAsync (oneSurveyQuestion);
+//cleanup 3
+
 				//App.Service.SynchronizeQuestionsAsync (oneSurveyQuestion.Id);
 				//AppConstants.NeedsUpdating == false;
 				AppConstants.NeedsUpdating = true;
-
-
-
-
 
 				MessagingCenter.Send<object> (this, "RefreshData");
 
@@ -174,7 +175,6 @@ namespace ThoughtsAndPrayers
 			// add to the ViewCell's ContextActions property
 			ContextActions.Add (prayerAction);
 			ContextActions.Add (thoughtAction);
-
 
 			//Contextual menu actions
 			//CONTEXT 1
