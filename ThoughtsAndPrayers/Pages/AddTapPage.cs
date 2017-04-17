@@ -96,11 +96,11 @@ namespace ThoughtsAndPrayers
 					SurveyQuestion oneSurveyQuestion = new SurveyQuestion () {
 						Id = randomNumber,
 						//						Id = "1234567891234",
-						Question = myQuestion.Text, // String.Format ("{0} at {1}", introQuestion, stringTimeNow),
+						Question = "My question text", //myQuestion.Text, // String.Format ("{0} at {1}", introQuestion, stringTimeNow),
 						Answers = "Answer - hi there",
 
-						FirstName = firstName.Text,
-						LastName = lastName.Text,
+						FirstName = "A", // firstName.Text,
+						LastName = "C", // lastName.Text,
 						FullName = String.Format ("{0} {1}", firstName.Text, lastName.Text),
 						SharedText = mySharedText.Text, //this is the field that gets updated in Azure,
 						FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
@@ -145,7 +145,11 @@ namespace ThoughtsAndPrayers
 				HorizontalOptions = LayoutOptions.StartAndExpand,
 				Children = {
 					//new Label { Text = "Tell your friends what's on your mind" }, 
-					prompt, myQuestion, fnPrompt, firstName, lnPrompt, lastName, mST, mySharedText, submitButton, cancelButton
+					//prompt, myQuestion, fnPrompt, firstName, lnPrompt, lastName, mST, mySharedText, submitButton, cancelButton
+		//prompt, myQuestion, fnPrompt, firstName, lnPrompt, lastName, 
+					mST, mySharedText, submitButton, cancelButton
+
+
 				}
 			};
 		}
