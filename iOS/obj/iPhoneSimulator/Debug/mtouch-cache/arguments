@@ -1,6 +1,6 @@
-# Version: 10.2.1.5 (xcode8.1: 44931ae)
-# [first argument, ignore] # /Library/Frameworks/Xamarin.iOS.framework/Versions/10.2.1.5/lib/mtouch/mtouch.exe
-/Library/Frameworks/Xamarin.iOS.framework/Versions/10.2.1.5/lib/mtouch/mtouch.exe \
+# Version: 10.4.0.128 (cycle9: ba11e48)
+# [first argument, ignore] # /Library/Frameworks/Xamarin.iOS.framework/Versions/10.4.0.128/lib/mtouch/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.4.0.128/lib/mtouch/mtouch.exe \
 	--cache \
 	/Users/andrewc/Github/ThoughtsAndPrayers/iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--sim \
@@ -195,6 +195,12 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Net.WebSockets.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ObjectModel.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.Emit.ILGeneration.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.Emit.Lightweight.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.Emit.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.Extensions.dll \
 	-r \

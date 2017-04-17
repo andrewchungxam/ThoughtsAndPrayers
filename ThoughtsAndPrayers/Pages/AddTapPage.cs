@@ -91,7 +91,7 @@ namespace ThoughtsAndPrayers
 					//String stringTimeNow = timeNow.ToString (culture);
 
 					CultureInfo ci = new CultureInfo ("en-US");
-					string sampleDateTimeString = dt.ToString ("MMM d", ci);
+					string sampleDateTimeString = dt.ToString ("MMM d h:mm tt", ci); // dt.ToString ("MMM d", ci);
 
 					SurveyQuestion oneSurveyQuestion = new SurveyQuestion () {
 						Id = randomNumber,

@@ -57,23 +57,23 @@ namespace ThoughtsAndPrayers
 			{
 				new ThinkingOfYou ()
 					{
-					id = randomNumber,
+					id = "50",
 					FirstName = "First",
 					LastName = "Last",
-					SharedText = "Shared Text",
+					SharedText = "Jimmy is thinking of you!",
 					NewText = "New Text",
-					FBProfileUrl = "1",
+					FBProfileUrl = "http://graph.facebook.com/450/picture?type=normal",
 					theFBID = "1",
 					thePrayerRequestId = "1"
 					},
 				new ThinkingOfYou ()
 					{
-					id = biggerRandomNumberString,
+					id = "51",
 					FirstName = "First",
 					LastName = "Last",
-					SharedText = "Shared Text",
+					SharedText = "Sally is praying for you :)",
 					NewText = "New Text",
-					FBProfileUrl = "1",
+					FBProfileUrl = "http://graph.facebook.com/450/picture?type=normal",
 					theFBID = "1",
 					thePrayerRequestId = "1"
 					}

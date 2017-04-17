@@ -1,26 +1,46 @@
 ﻿<Properties StartupConfiguration="{45F03809-6444-4037-8350-83367BD0811C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ThoughtsAndPrayers/MenuPages/ProfilePage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ThoughtsAndPrayers/Pages/AddTapPage.cs">
     <Files>
-      <File FileName="ThoughtsAndPrayers/Services/AzureSurveyService.cs" Line="231" Column="1" />
-      <File FileName="ThoughtsAndPrayers/Interfaces/ISurveyQuestionService.cs" Line="26" Column="57" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" Line="538" Column="25" />
-      <File FileName="ThoughtsAndPrayers/Models/ThinkingOfYou.cs" Line="17" Column="34" />
-      <File FileName="iOS/AppDelegate.cs" Line="65" Column="90" />
-      <File FileName="ThoughtsAndPrayers/Pages/DELETE_ThoughtAndPrayerDetailPage.cs" Line="52" Column="1" NotebookId="1" />
-      <File FileName="ThoughtsAndPrayers/Pages/ThoughtAndPrayerDetailPageTwo.cs" Line="59" Column="75" NotebookId="1" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/ProfilePage.cs" Line="46" Column="22" NotebookId="1" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" Line="166" Column="1" NotebookId="2" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" NotebookId="2" />
+      <File FileName="ThoughtsAndPrayers/Models/ThinkingOfYou.cs" Line="25" Column="36" NotebookId="2" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/TodoListPage.cs" Line="1" Column="1" NotebookId="2" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/ProfilePage.cs" Line="1" Column="1" NotebookId="2" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/MyTabbedPage.cs" Line="1" Column="1" NotebookId="2" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/MyPrayersPage.cs" Line="1" Column="1" NotebookId="2" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/DuplicateContactsPage.cs" Line="1" Column="1" NotebookId="2" />
+      <File FileName="ThoughtsAndPrayers/Pages/ThoughtAndPrayerDetailPageTwo.cs" Line="375" Column="1" NotebookId="2" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="1584" Y="134" Width="616" Height="854">
+        <Files>
+          <File FileName="ThoughtsAndPrayers/Models/SurveyQuestion.cs" Line="8" Column="15" />
+        </Files>
+      </FloatingWindow>
+      <FloatingWindow WindowId="2" X="688" Y="675" Width="640" Height="480">
+        <Files>
+          <File FileName="ThoughtsAndPrayers/Pages/AddTapPage.cs" Line="1" Column="1" NotebookId="1" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/Pages/ThoughtAndPrayerDetailPage.cs" line="57" column="1" />
-      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="477" column="1" />
+      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/Pages/ThoughtAndPrayerDetailPage.cs" relfile="ThoughtsAndPrayers/Pages/ThoughtAndPrayerDetailPage.cs" line="57" column="1" />
+      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="481" column="1" />
+      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="150" column="1" />
+      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="146" column="1" />
+      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="147" column="1" />
+      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="166" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="iOS/Services/iOSLoginProvider.cs" line="18" offsetX="532" offsetY="272" expression="RootView" liveUpdate="False" />
     <Watch file="iOS/Services/iOSLoginProvider.cs" line="18" offsetX="532" offsetY="272" expression="RootView" liveUpdate="False" />
+    <Watch file="ThoughtsAndPrayers/Pages/ThoughtAndPrayerDetailPageTwo.cs" line="235" offsetX="670" offsetY="4212" expression="tapNativeCell" liveUpdate="False" />
+    <Watch file="ThoughtsAndPrayers/Pages/ThoughtAndPrayerDetailPageTwo.cs" line="346" offsetX="871" offsetY="6210" expression="thinkingOfYousList" liveUpdate="True" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.ThoughtsAndPrayers.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.491ACA91-CE4D-44EE-B323-F33F6C86E2B4" />
+  <MultiItemStartupConfigurations />
 </Properties>

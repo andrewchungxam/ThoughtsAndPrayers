@@ -36,8 +36,8 @@ namespace ThoughtsAndPrayers
 			DateTime dt = DateTime.Now;
 
 			CultureInfo ci = new CultureInfo ("en-US");
-			string sampleDateTimeString = dt.ToString ("MMM d", ci);
-
+			string sampleDateString = dt.ToString ("MMM d", ci);
+			string sampleDateTimeString = dt.ToString ("MMM d h:mm tt", ci);
 			//Also above can be done more formally like this:
 			//https://msdn.microsoft.com/en-us/library/cc165448.aspx
 
@@ -128,22 +128,26 @@ namespace ThoughtsAndPrayers
 				//
 				ThinkingOfYou oneThinkingOfYou = new ThinkingOfYou () {
 					theId = randomNumber,
-
-			FirstName = "TestFirst",
-			LastName = "TestLast",
-			FullName = "TestFirst TestLast",
-			SharedText = "Test SharedText",
-			NewText = "Test NewText",
-			FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
-			CreateDateString = sampleDateTimeString,
-			CreateDateTimeString = sampleDateTimeString,
+					FirstName = "TestFirst",
+					LastName = "TestLast",
+					FullName = AppConstants.FBFullName,
+					SharedText = String.Format("{0} is thinking of you!", AppConstants.FBFullName),
+					NewText = "Test NewText",
+					FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
+					CreateDateString = sampleDateString,
+					CreateDateTimeString = sampleDateTimeString,
 
 		//			public string "WE NEED THE ID OF THE PRAYER REQUEST"
 		//IE. each prayer request needs an ID
 		//THEN on the page, we want to filter by that ID
 
-			theFBID = AppConstants.FBIdentityID,
-			thePrayerRequestId =  AppConstants.FBIdentityID
+//					((SurveyQuestion)mi.CommandParameter).Id;
+
+					thePrayerRequestId = ((SurveyQuestion)mi.CommandParameter).Id, //(SurveyQuestion)mi.CommandParameter//underlying object is Survey Question Object.  I want Survey Question.Id, 
+					theFBID = AppConstants.FBIdentityID,
+
+
+					//thePrayerRequestId =  AppConstants.FBIdentityID
 
 					//Id = randomNumber,
 					////						Id = "1234567891234",
@@ -252,11 +256,13 @@ namespace ThoughtsAndPrayers
 //			var dateLabel = new Label {
 			dateLabel = new Label {
 				//Text = "hello"
-				Text = sampleDateTimeString,
+				//Text = sampleDateTimeString,
 				FontAttributes = FontAttributes.Italic,
 				FontSize = Device.GetNamedSize (NamedSize.Small, typeof (Label)),
 				TextColor = Color.Gray
-			}; 
+			};
+			//new
+			dateLabel.SetBinding (Label.TextProperty, "CreateDateString");
 
 
 			//Need a date and time data point (simple) - let's just do (month & year) Nov 9th
@@ -294,7 +300,7 @@ namespace ThoughtsAndPrayers
 				Orientation = StackOrientation.Vertical,
 				Padding = new Thickness (0, 0, 0, 0),
 				HorizontalOptions = LayoutOptions.StartAndExpand,
-				Children = { label, dateLabel, tempLabel } // label, dateLabel }
+				Children = { label, dateLabel } //, tempLabel } // label, dateLabel }
 				//Children = { firstName, label }
 			};
 
