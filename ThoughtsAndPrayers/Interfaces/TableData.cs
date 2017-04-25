@@ -9,8 +9,6 @@ namespace ThoughtsAndPrayers
 		public DateTimeOffset? CreatedAt { get; set; }
 		public byte [] Version { get; set; }
 
-		//public TableData ()
-		//{
-		//}
+
 	}
 }

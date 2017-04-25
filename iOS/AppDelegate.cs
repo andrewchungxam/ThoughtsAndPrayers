@@ -12,6 +12,7 @@ using System.Diagnostics;
 
 //using Microsoft.Azure.Mobile.Server.AppService;
 using System.Net.Http;
+using ImageCircle.Forms.Plugin.iOS;
 
 namespace ThoughtsAndPrayers.iOS
 {
@@ -25,6 +26,7 @@ namespace ThoughtsAndPrayers.iOS
 			Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init ();
 
 			global::Xamarin.Forms.Forms.Init ();
+			ImageCircleRenderer.Init ();
 
 			//https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users
 			App.Init (this);

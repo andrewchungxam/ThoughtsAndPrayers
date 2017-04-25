@@ -8,14 +8,26 @@ namespace ThoughtsAndPrayers
 		public TodoListPage ()
 		{
 
+			Label myThoughts = new Label {
+				Text = "Thoughts"
+			};
+
+			Slider mySlider = new Slider ();
+
+			Label myPrayer = new Label {
+				Text = "Prayers"
+			};
+
 
 			Content =
 				new StackLayout {
-					Padding = new Thickness (10, 10, 10, 10),
+					Orientation = StackOrientation.Horizontal,
+					Padding = new Thickness (10, 50, 10, 10),
 					Children = {
-					new Label { Text = "Settings Page" }
+//					new Label { Text = "Settings Page" }
+					myThoughts, mySlider, myPrayer
 				}
-			};
+				};
 		}
 	}
 }

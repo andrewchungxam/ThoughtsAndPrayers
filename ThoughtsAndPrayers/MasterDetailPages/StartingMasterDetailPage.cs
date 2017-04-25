@@ -35,16 +35,10 @@ namespace ThoughtsAndPrayers
 				
 			}
 
-
 			//ACTION SHEET VERISON
 			//tbi = new ToolbarItem ("+", null, async () => {
-
 			//	var answ = await DisplayActionSheet ("What's on your mind?", "Cancel", null, new string [] { "Submit", "Cancel" });
-
 			//	var j = 7;
-
-
-
 
 			ToolbarItems.Add (tbi);
 

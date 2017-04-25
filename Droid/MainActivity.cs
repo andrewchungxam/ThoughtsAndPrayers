@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace ThoughtsAndPrayers.Droid
 {
@@ -24,6 +25,7 @@ namespace ThoughtsAndPrayers.Droid
 			base.OnCreate (bundle);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
+			ImageCircleRenderer.Init ();
 
 			((DroidLoginProvider)DependencyService.Get<ILoginProvider> ()).Init (this);
 

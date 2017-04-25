@@ -6,9 +6,6 @@ namespace ThoughtsAndPrayers
 {
 	public interface ICloudTable<T> where T: TableData
 	{
-		//public ICloudTable ()
-		//{
-		//}
 
 		Task<T> CreateItemAsync (T item);
 		Task<T> ReadItemAsync (string id);

@@ -5,18 +5,6 @@ namespace ThoughtsAndPrayers
 {
 	public static class MyColors
 	{
-//		static string myGreen;
-
-		//Command I
-		//string MyGreen {
-		//	get {
-		//		return this.myGreen;
-		//	}
-
-		//	set {
-		//		this.myGreen = value;
-		//	}
-		//}
 
 		//FLAT UI COLORS
 		//blue
@@ -63,13 +51,6 @@ namespace ThoughtsAndPrayers
 		//color.co
 		//https://coolors.co/e7e6f7-817f82-413c58-827081-a5b0e5
 		public static Color PurpleBrown = Color.FromHex ("#413C58");
-
-
-
-
-		//		BackgroundColor = Color.FromHex ("#2980b9");
-
-
 
 	}
 }

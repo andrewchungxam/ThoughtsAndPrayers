@@ -9,8 +9,5 @@ namespace ThoughtsAndPrayers
 
 		public Type TargetType { get; set; }
 
-		//public MasterPageItem ()
-		//{
-		//}
 	}
 }

@@ -1,38 +1,21 @@
 ﻿<Properties StartupConfiguration="{45F03809-6444-4037-8350-83367BD0811C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ThoughtsAndPrayers/Pages/AddTapPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ThoughtsAndPrayers/MasterDetailPages/SideMasterPage.cs">
     <Files>
-      <File FileName="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" Line="166" Column="1" NotebookId="2" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" NotebookId="2" />
-      <File FileName="ThoughtsAndPrayers/Models/ThinkingOfYou.cs" Line="25" Column="36" NotebookId="2" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/TodoListPage.cs" Line="1" Column="1" NotebookId="2" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/ProfilePage.cs" Line="1" Column="1" NotebookId="2" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/MyTabbedPage.cs" Line="1" Column="1" NotebookId="2" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/MyPrayersPage.cs" Line="1" Column="1" NotebookId="2" />
-      <File FileName="ThoughtsAndPrayers/MenuPages/DuplicateContactsPage.cs" Line="1" Column="1" NotebookId="2" />
-      <File FileName="ThoughtsAndPrayers/Pages/ThoughtAndPrayerDetailPageTwo.cs" Line="375" Column="1" NotebookId="2" />
+      <File FileName="Droid/MainActivity.cs" Line="28" Column="23" />
+      <File FileName="iOS/AppDelegate.cs" Line="30" Column="4" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" Line="128" Column="22" />
+      <File FileName="ThoughtsAndPrayers/Pages/TheTabbedPage.cs" Line="30" Column="1" />
+      <File FileName="ThoughtsAndPrayers/MenuPages/TodoListPage.cs" Line="31" Column="4" />
+      <File FileName="ThoughtsAndPrayers/MasterDetailPages/SideMasterPage.cs" Line="27" Column="25" />
+      <File FileName="ThoughtsAndPrayers/MasterDetailPages/SideMasterPageItem.cs" Line="1" Column="1" />
+      <File FileName="ThoughtsAndPrayers/MasterDetailPages/StartingMasterDetailPage.cs" Line="1" Column="1" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="1584" Y="134" Width="616" Height="854">
-        <Files>
-          <File FileName="ThoughtsAndPrayers/Models/SurveyQuestion.cs" Line="8" Column="15" />
-        </Files>
-      </FloatingWindow>
-      <FloatingWindow WindowId="2" X="688" Y="675" Width="640" Height="480">
-        <Files>
-          <File FileName="ThoughtsAndPrayers/Pages/AddTapPage.cs" Line="1" Column="1" NotebookId="1" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/Pages/ThoughtAndPrayerDetailPage.cs" relfile="ThoughtsAndPrayers/Pages/ThoughtAndPrayerDetailPage.cs" line="57" column="1" />
-      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="481" column="1" />
-      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="150" column="1" />
-      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="146" column="1" />
-      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="147" column="1" />
-      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="166" column="1" />
+      <Breakpoint file="/Users/andrewc/Github/ThoughtsAndPrayers/ThoughtsAndPrayers/MenuPages/ContactsPage.cs" relfile="ThoughtsAndPrayers/MenuPages/ContactsPage.cs" line="273" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

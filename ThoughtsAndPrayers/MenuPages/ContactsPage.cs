@@ -6,6 +6,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using ImageCircle.Forms.Plugin.Abstractions;
 using Xamarin.Forms;
 
 
@@ -18,20 +19,8 @@ namespace ThoughtsAndPrayers
 		string localFBString;
 		StackLayout layout;
 
-
-
 		public newNativeCell ()
 		{
-			//MOVING DATE DATE UP
-			////TEXT - shared prayer request
-			//var sampleDateTime = DateTime.Today;
-			////string sampleDateTimeString = Convert.ToString (sampleDateTime);
-			//CultureInfo ci = new CultureInfo ("en-US");
-			//string sampleDateTimeString = sampleDateTime.ToString ("MMM d", ci);
-
-			//TEXT - shared prayer request
-			//string theDateTime = "01/28/2008 14:50:50.42";
-			//DateTime dt = Convert.ToDateTime (theDateTime);
 
 			DateTime dt = DateTime.Now;
 
@@ -41,91 +30,26 @@ namespace ThoughtsAndPrayers
 			//Also above can be done more formally like this:
 			//https://msdn.microsoft.com/en-us/library/cc165448.aspx
 
-
-
-
-
-
-
-
-			//var moreAction = new MenuItem { Text = "More" };
-			//moreAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-			//moreAction.Clicked += async (sender, e) => {
-			//	var mi = ((MenuItem)sender);
-			//	Debug.WriteLine ("More Context Action clicked: " + mi.CommandParameter);
-			//};
-
-			//var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
-			//deleteAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-			//deleteAction.Clicked += async (sender, e) => {
-			//	var mi = ((MenuItem)sender);
-			//	Debug.WriteLine ("Delete Context Action clicked: " + mi.CommandParameter);
-			//};
-			//// add to the ViewCell's ContextActions property
-			//ContextActions.Add (moreAction);
-			//ContextActions.Add (deleteAction);
-
 			var prayerAction = new MenuItem { Text = "Delete", IsDestructive = true };
 			prayerAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
 			prayerAction.Clicked += async (sender, e) => {
 				var mi = ((MenuItem)sender);
 				Debug.WriteLine ("More Context Action clicked: " + ((SurveyQuestion)mi.CommandParameter).SharedText);
-
 				await App.Service.DeleteSurveyQuestionAsync ((SurveyQuestion)mi.CommandParameter);
 				AppConstants.NeedsUpdating = true;
-
 				MessagingCenter.Send<object> (this, "RefreshData");
 
 				//AT THE CONTACTS PAGE LEVEL - NEED TO RUN :: PostDeleteActions ();
-
-
 			};
-
-
-
 
 			var thoughtAction = new MenuItem { Text = "T&P" };//, IsDestructive = true }; // red background
 			thoughtAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
 			thoughtAction.Clicked += async (sender, e) => {
 				var mi = ((MenuItem)sender);
 
-//cleanup 1
-//				Debug.WriteLine ("Delete Context Action clicked: " + ((SurveyQuestion)mi.CommandParameter).SharedText);
-//				await App.Service.DeleteSurveyQuestionAsync ((SurveyQuestion)mi.CommandParameter);
-//				AppConstants.NeedsUpdating = true;
-//cleanup 1
-
-				//test
-
 				System.Random random = new Random ();
 				string randomNumber = string.Join (string.Empty, Enumerable.Range (0, 10).Select (number => random.Next (0, 5).ToString ()));
 
-//cleanup 2
-				//SurveyQuestion oneSurveyQuestion = new SurveyQuestion () {
-//cleanup 2
-
-
-
-				//	Id = randomNumber,
-				//	//						Id = "1234567891234",
-				//	Question = "Test question", //myQuestion.Text, // String.Format ("{0} at {1}", introQuestion, stringTimeNow),
-				//	Answers = "Answer - hi there",
-
-				//	FirstName = "FirstName",
-				//	LastName = "LastName", //lastName.Text,
-				//	FullName = "FirstName LastName", //String.Format ("{0} {1}", firstName, LastName),
-				//	SharedText = "Shared text", //mySharedText.Text, //this is the field that gets updated in Azure,
-				//	FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
-				//	CreateDateString = sampleDateTimeString
-				//};
-				////additional_adding_this
-
-				//App.Service.AddOrUpdateSurveyQuestionAsync (oneSurveyQuestion);
-				////App.Service.SynchronizeQuestionsAsync (oneSurveyQuestion.Id);
-				////AppConstants.NeedsUpdating == false;
-				//AppConstants.NeedsUpdating = true;
-
-				//
 				ThinkingOfYou oneThinkingOfYou = new ThinkingOfYou () {
 					theId = randomNumber,
 					FirstName = "TestFirst",
@@ -137,37 +61,16 @@ namespace ThoughtsAndPrayers
 					CreateDateString = sampleDateString,
 					CreateDateTimeString = sampleDateTimeString,
 
-		//			public string "WE NEED THE ID OF THE PRAYER REQUEST"
-		//IE. each prayer request needs an ID
-		//THEN on the page, we want to filter by that ID
+					//public string "WE NEED THE ID OF THE PRAYER REQUEST"
+					//i.e. each prayer request needs an ID
+					//THEN on the page, we want to filter by that ID
 
-//					((SurveyQuestion)mi.CommandParameter).Id;
-
-					thePrayerRequestId = ((SurveyQuestion)mi.CommandParameter).Id, //(SurveyQuestion)mi.CommandParameter//underlying object is Survey Question Object.  I want Survey Question.Id, 
+					thePrayerRequestId = ((SurveyQuestion)mi.CommandParameter).Id, 
 					theFBID = AppConstants.FBIdentityID,
 
-
-					//thePrayerRequestId =  AppConstants.FBIdentityID
-
-					//Id = randomNumber,
-					////						Id = "1234567891234",
-					//Question = "Test question", //myQuestion.Text, // String.Format ("{0} at {1}", introQuestion, stringTimeNow),
-					//Answers = "Answer - hi there",
-
-					//FirstName = "FirstName",
-					//LastName = "LastName", //lastName.Text,
-					//FullName = "FirstName LastName", //String.Format ("{0} {1}", firstName, LastName),
-					//SharedText = "Shared text", //mySharedText.Text, //this is the field that gets updated in Azure,
-					//FBProfileUrl = AppConstants.FullURLPlusFBIdentityID,
-					//CreateDateString = sampleDateTimeString
 				};
-				//additional_adding_this
 
 				await App.Service.AddOrUpdateThinkingOfYouAsync (oneThinkingOfYou);
-
-//cleanup 3
-//				App.Service.AddOrUpdateSurveyQuestionAsync (oneSurveyQuestion);
-//cleanup 3
 
 				//App.Service.SynchronizeQuestionsAsync (oneSurveyQuestion.Id);
 				//AppConstants.NeedsUpdating == false;
@@ -180,49 +83,13 @@ namespace ThoughtsAndPrayers
 			ContextActions.Add (prayerAction);
 			ContextActions.Add (thoughtAction);
 
-			//Contextual menu actions
-			//CONTEXT 1
-			//var prayerAction = new MenuItem { Text = "Prayers", IsDestructive = true };
-			//var thoughtAction = new MenuItem { Text = "Thoughts" };
 
-
-			//DEC 19 - exp
-
-
-			//thoughtAction.Clicked += (sender, e) => MessagingCenter.Send<newNativeCell> (this, "ThoughtActionItem");
-			//prayerAction.Clicked += (sender, e) => MessagingCenter.Send<newNativeCell> (this, "PrayerActionItem");
-
-
-			//ContextActions.Add (thoughtAction);
-			//ContextActions.Add (prayerAction);
-
-
-			//firstName = new Label {
-			//	//					YAlign = TextAlignment.Center
-			//	VerticalTextAlignment = TextAlignment.Center
-			//};
-			//firstName.SetBinding (Label.TextProperty, "FullName");
-
-			label = new Label {
-				//					YAlign = TextAlignment.Center,
-				VerticalTextAlignment = TextAlignment.Center,
-				//Font = Font.SystemFontOfSize (10)
+			label = new Label 
+			{
+				VerticalTextAlignment = TextAlignment.Center			
 			};
 
-			//			label.SetBinding (Label.TextProperty, "Id");
-			//label.SetBinding (Label.TextProperty, "SharedText");
-
-			//FREEZE - DEC 11 2016 - works correctly via Question
-			//label.SetBinding (Label.TextProperty, "Question");
-
 			label.SetBinding (Label.TextProperty, "SharedText");
-
-
-			//var fav = new Image {
-			//	Source = FileImageSource.FromFile ("favorite.png"),
-			//};
-			//				//TODO: implement favorites
-			//				//fav.SetBinding (Image.IsVisibleProperty, "IsFavorite");
 
 
 			tempLabel = new Label {VerticalTextAlignment = TextAlignment.Center };
@@ -239,31 +106,44 @@ namespace ThoughtsAndPrayers
 			//	localFBString = String.Format ("http://graph.facebook.com/165706980572555/picture?type=normal", tempLabel.Text);
 			//}
 
-			//PLACEHOLDER
+			//IMAGES - BOXES
 			var profileImage = new Image {
 				//Source =   ImageSource.FromUri (new Uri("http://graph.facebook.com/165706980572556/picture?type=normal"))
 				//			Source = ImageSource.FromUri (new Uri (localFBString))
 				//Source = localFBString
 			};
-
 			profileImage.SetBinding (Image.SourceProperty, "FBProfileUrl");
+			//			profileImage.SetBinding (Image.SourceProperty, "FullURIFBProfileUrl");
 
+
+			//IMAGES - CIRLCE-BOXES
+			var circleProfileImage = new CircleImage {
+				//Source =   ImageSource.FromUri (new Uri("http://graph.facebook.com/165706980572556/picture?type=normal"))
+				//			Source = ImageSource.FromUri (new Uri (localFBString))
+				//Source = localFBString
+
+				BorderColor = Color.White,
+				BorderThickness = 3,
+				HeightRequest = 59,
+				WidthRequest = 59,
+				Aspect = Aspect.AspectFill,
+				HorizontalOptions = LayoutOptions.Center
+
+
+			};
+			circleProfileImage.SetBinding (Image.SourceProperty, "FBProfileUrl");
 			//			profileImage.SetBinding (Image.SourceProperty, "FullURIFBProfileUrl");
 
 
 
 
-//			var dateLabel = new Label {
 			dateLabel = new Label {
-				//Text = "hello"
-				//Text = sampleDateTimeString,
 				FontAttributes = FontAttributes.Italic,
 				FontSize = Device.GetNamedSize (NamedSize.Small, typeof (Label)),
 				TextColor = Color.Gray
 			};
-			//new
-			dateLabel.SetBinding (Label.TextProperty, "CreateDateString");
 
+			dateLabel.SetBinding (Label.TextProperty, "CreateDateString");
 
 			//Need a date and time data point (simple) - let's just do (month & year) Nov 9th
 
@@ -290,7 +170,7 @@ namespace ThoughtsAndPrayers
 				Orientation = StackOrientation.Vertical,
 				Padding = new Thickness (0, 0, 0, 0),
 				//HorizontalOptions = LayoutOptions.StartAndExpand,
-				Children = { profileImage } // label, dateLabel }
+				Children = { circleProfileImage } //profileImage } // label, dateLabel }
 												//Children = { firstName, label }
 			};
 
@@ -300,17 +180,8 @@ namespace ThoughtsAndPrayers
 				Orientation = StackOrientation.Vertical,
 				Padding = new Thickness (0, 0, 0, 0),
 				HorizontalOptions = LayoutOptions.StartAndExpand,
-				Children = { label, dateLabel } //, tempLabel } // label, dateLabel }
-				//Children = { firstName, label }
+				Children = { label, dateLabel } 
 			};
-
-			//	var text = new StackLayout {
-			//	Orientation = StackOrientation.Horizontal,
-			//	Padding = new Thickness (0, 0, 0, 0),
-			//	HorizontalOptions = LayoutOptions.StartAndExpand,
-			//	Children = { dateLabel, label } // label, dateLabel }
-			//							 //Children = { firstName, label }
-			//};
 
 			layout = new StackLayout {
 				Padding = new Thickness (10, 10, 5, 10),
@@ -345,54 +216,12 @@ namespace ThoughtsAndPrayers
 		IEnumerable<SharedPrayerRequest> es = SeedData.Get ();
 		//		IEnumerable<SurveyResponse> es; // = service.GetResponsesForSurveyAsync ();
 
-
-
-
-
 		public ContactsPage ()
 		{
 
 			MessagingCenter.Subscribe<object> (this, "RefreshData", async (sender) => {
 				await RefreshData ();
 			});
-
-
-			//			es = service.GetResponsesForSurveyAsync ("28f9279b-d975-4b02-9e5d-8a8d185c04d1");
-
-			//BackgroundColor = MyColors.Clouds;
-
-			//Contextual menu actions
-			//CONTEXT 2
-
-
-			//var es = SeedData.Get ();
-
-			//theListView = new ListView () {
-
-			//theListView = new ListView () {
-			//	BackgroundColor = Color.Transparent,
-			//	HasUnevenRows = true,
-			//	ItemsSource = es,
-			//	ItemTemplate = new DataTemplate (() => {
-			//		var functionalCell = new FunctionalCell ();
-			//		return functionalCell;
-			//	})
-
-
-			//};
-
-			//theListView.ItemTemplate.SetBinding (FunctionalCell.TextProperty, "FirstName");
-
-
-
-			//answerListView.ItemTapped += async (object sender, ItemTappedEventArgs e) => {
-			//	var theSurveyQuestion = (SurveyQuestion)e.Item;
-			//	//var thoughtAndPrayerDetailPage = new ThoughtAndPrayerDetailPage (sharedPrayerRequest);
-			//	var contactsDetailPage = new ContactsDetailsPage (theSurveyQuestion);
-
-			//	contactsDetailPage.BindingContext = theSurveyQuestion;
-			//	await Navigation.PushAsync (contactsDetailPage);
-			//};
 
 
 			answerListView = new ListView () 
@@ -405,27 +234,11 @@ namespace ThoughtsAndPrayers
 				})
 			};
 
-			//replacing			label.SetBinding (Label.TextProperty, "SharedText");
-			//answerListView.ItemTemplate.SetBinding(NewNativeCell.
-
-
-
-			/// <summary>
-			/// NEXT UP
-			/// </summary>
-
 			//answerListView.IsPullToRefreshEnabled = true;
 			answerListView.ItemTapped += this.OnItemTapped;
-			//async (object sender, ItemTappedEventArgs e) => {
-			//	var sharedPrayerRequest = (SharedPrayerRequest)e.Item;
-			//	var thoughtAndPrayerDetailPage = new ThoughtAndPrayerDetailPage (sharedPrayerRequest);
-			//	thoughtAndPrayerDetailPage.BindingContext = sharedPrayerRequest;
-			//	await Navigation.PushAsync (thoughtAndPrayerDetailPage);
-			//};
-
+	
 
 			//MESSAGES
-
 			MessagingCenter.Subscribe<NewNativeCell> (this, "ThoughtActionItem", ItemBought);
 			MessagingCenter.Subscribe<NewNativeCell> (this, "PrayerActionItem", ItemQuantityIncreased);
 
@@ -439,25 +252,15 @@ namespace ThoughtsAndPrayers
 			};
 		}
 
-		//public ICommand ItemClickCommand {
-		//	get { return (ICommand)this.GetValue (ItemClickCommandProperty); }
-		//	set { this.SetValue (ItemClickCommandProperty, value); }
-		//}
-
 
 		//Contextual menu actions
 		//CONTEXT 3
 		internal void ItemBought (NewNativeCell item)
 		{
-
 			Debug.WriteLine ("Item Bought hit");
 			
 			//write something here
 			DisplayAlert ("Alert", "hello" , "OK");
-   			
-
-
-			//item.View. + " bought.", "OK");
 
 		}
 
@@ -466,19 +269,6 @@ namespace ThoughtsAndPrayers
 			//write something here
 			DisplayAlert ("Alert", "hello", "OK");
 		}
-
-		//internal void ItemBought (FunctionalCell item)
-		//{
-		//	DisplayAlert ("Alert", item.Text + " bought.", "OK");
-		//}
-
-		//internal void ItemQuantityIncreased (FunctionalCell item)
-		//{
-		//	DisplayAlert ("Alert", item.Text + "quantity increased by one", "OK");
-		//}
-
-
-
 
 		private async void OnItemTapped (object sender, ItemTappedEventArgs e)
 		{
@@ -511,20 +301,7 @@ namespace ThoughtsAndPrayers
 			//thoughtAndPrayerDetailPage.BindingContext = newSharedPrayerRequest;
 			//await Navigation.PushAsync (thoughtAndPrayerDetailPage);
 
-
-
-			//mahdi	}
 		}
-
-		//answerListView.ItemTapped += async (object sender, ItemTappedEventArgs e) => {
-		//var sharedPrayerRequest = (SharedPrayerRequest)e.Item;
-		//var thoughtAndPrayerDetailPage = new ThoughtAndPrayerDetailPage (sharedPrayerRequest);
-		//thoughtAndPrayerDetailPage.BindingContext = sharedPrayerRequest;
-		//await Navigation.PushAsync (thoughtAndPrayerDetailPage);
-		//};
-
-
-
 
 		protected override async void OnAppearing ()
 		{
@@ -583,15 +360,8 @@ namespace ThoughtsAndPrayers
 			IsBusy = true;
 
 			try {
-				// Add the questions
-
-				//questions = (await service.GetQuestionsAsync ()).ToList ();
-
+				
 				questions = (await App.Service.GetQuestionsAsync ()).ToList ();
-
-				//foreach (var q in questions)
-				//	questionPicker.Items.Add (q.Question);
-				//questionPicker.SelectedIndex = 0;
 
 				answerListView.ItemsSource = questions;
 				AppConstants.NeedsUpdating = false;
@@ -604,10 +374,6 @@ namespace ThoughtsAndPrayers
 				IsBusy = false;
 			}
 		}
-
-
-
-
 
 		public SurveyQuestion GetSelectedQuestion ()
 		{
@@ -741,65 +507,7 @@ namespace ThoughtsAndPrayers
 
 			}, TaskContinuationOptions.OnlyOnFaulted);
 
-			// And display the results page.
-			//await Navigation.PushAsync (new ResultsPage { BindingContext = new { Question = selectedQuestion.Question, Answers = results } });
-			//Await a new Detail page.
 		}
-
-
-
-
-
-
-
-		////not exactly needed in this model
-		//internal void BuyItem (FunctionalCell item)
-		//{
-		//	var internales = SeedData.Get ();
-
-		//	if (internales != null) {
-		//		var obj = internales. (X => X.FirstName == item.Text);
-		//		if (obj != null) obj.Buy = true;
-		//	}
-
-		//	UpdateAddItemsList ();
-
-		//	MessagingCenter.Send<ContactsPage> (this, "UpdateBuyItemsList");
-		//}
-
-		//internal void UpdateAddItemsList ()
-		//{
-		//	if (Application.Current.Properties.ContainsKey ("Items")) {
-		//		allItems = (List<Item>)Application.Current.Properties ["Items"];
-		//		addItems = allItems.Where (item => item.Buy != true);
-		//	}
-
-		//	addView.ItemsSource = addItems;
-
-
-		//}
-
-
-
-
-		//internal void REFACTRemoveItem (FunctionalCell item)
-		//{
-		//	if (es != null) {
-		//		var obj = es.First (x => x.Name == item.Text);
-
-		//		//ENGLISH -> IENNURMABLE (ES) - wahts the FIRST THIG THAT MAtCHES THIS (x => x.Name == item.Tex ) 
-		//		es.Remove (obj);
-
-		//		//ENGLISH -> IENNURMABLE (ES) - wahts the FIRST THIG THAT MAtCHES THIS (x => x.Name == item.Tex ) 
-
-		//	}
-
-		//	UpdateAddItemsList ();
-
-		//	//UPDATE THAT LIST
-		//}
-
-
 
 	}
 
@@ -807,18 +515,6 @@ namespace ThoughtsAndPrayers
 	{
 		public FunctionalCell ()
 		{
-
-			//this.SetBinding (TextCell.TextProperty, "");
-			//this.SetBinding (TextCell.DetailProperty, "");
-
-			//var boughtAction = new MenuItem { Text = "Bought", IsDestructive = true };
-			//var plusOneAction = new MenuItem { Text = "+1" };
-
-			//boughtAction.Clicked += (sender, e) => MessagingCenter.Send<FunctionalCell> (this, "BoughtItem");
-			//plusOneAction.Clicked += (sender, e) => MessagingCenter.Send<FunctionalCell> (this, "AddOne");
-
-			//ContextActions.Add (boughtAction);
-			//ContextActions.Add (plusOneAction);
 
 			var prayerAction = new MenuItem { Text = "Prayers", IsDestructive = true };
 			var thoughtAction = new MenuItem { Text = "Thoughts" };
@@ -851,12 +547,6 @@ namespace ThoughtsAndPrayers
 			};
 			label.SetBinding (Label.TextProperty, "SharedText");
 
-			//var fav = new Image {
-			//	Source = FileImageSource.FromFile ("favorite.png"),
-			//};
-			//				//TODO: implement favorites
-			//				//fav.SetBinding (Image.IsVisibleProperty, "IsFavorite");
-
 			var text = new StackLayout {
 				Orientation = StackOrientation.Vertical,
 				Padding = new Thickness (0, 0, 0, 0),
@@ -872,7 +562,6 @@ namespace ThoughtsAndPrayers
 			};
 			View = layout;
 		}
-
 
 		/// <summary>
 		/// CREATING RIGHT SIZED ROWS WORKS BUT CREATES VERY LARGE ROWS AFTER THE LAST ONE

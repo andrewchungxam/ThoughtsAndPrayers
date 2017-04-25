@@ -58,3 +58,5 @@
 /Users/andrewc/Github/ThoughtsAndPrayers/iOS/bin/iPhoneSimulator/Debug/Facebook.dll
 /Users/andrewc/Github/ThoughtsAndPrayers/iOS/bin/iPhoneSimulator/Debug/ThoughtsAndPrayers.dll
 /Users/andrewc/Github/ThoughtsAndPrayers/iOS/bin/iPhoneSimulator/Debug/ThoughtsAndPrayers.dll.mdb
+/Users/andrewc/Github/ThoughtsAndPrayers/iOS/bin/iPhoneSimulator/Debug/ImageCircle.Forms.Plugin.Abstractions.dll
+/Users/andrewc/Github/ThoughtsAndPrayers/iOS/bin/iPhoneSimulator/Debug/ImageCircle.Forms.Plugin.iOS.dll

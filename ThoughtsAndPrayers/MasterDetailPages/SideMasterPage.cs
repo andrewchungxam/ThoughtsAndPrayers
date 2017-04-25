@@ -24,16 +24,11 @@ namespace ThoughtsAndPrayers
 			                          
 			var masterPageItems = new List<SideMasterPageItem> ();
 			masterPageItems.Add (new SideMasterPageItem {
-				Title = "Contacts",
+				Title = "Prayer Requests",
 				IconSource = "contacts.png",
 				TargetType = typeof (MyTabbedPage)
 			});
-			//masterPageItems.Add (new SideMasterPageItem 
-			//{
-			//	Title = "Contacts",
-			//	IconSource = "contacts.png",
-			//	TargetType = typeof (ContactsPage)
-			//});
+
 			masterPageItems.Add (new SideMasterPageItem {
 				Title = "Settings",
 				IconSource = "todo.png",
@@ -71,11 +66,6 @@ namespace ThoughtsAndPrayers
 				}
 			};
 
-			//Content = new StackLayout {
-			//	Children = {
-			//		new Label { Text = "Hello ContentPage" }
-			//	}
-			//};
 		}
 	}
 }

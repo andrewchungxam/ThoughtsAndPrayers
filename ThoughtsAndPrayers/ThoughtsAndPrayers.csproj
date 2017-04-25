@@ -35,9 +35,6 @@
     <Compile Include="Models\SharedPrayerRequest.cs" />
     <Compile Include="Data\SeedData.cs" />
     <Compile Include="Pages\TheTabbedPage.cs" />
-    <Compile Include="Pages\DELETE_ThoughtAndPrayerDetailPage.cs" />
-    <Compile Include="Pages\DELETE_SampleTwoPage.cs" />
-    <Compile Include="Pages\DELETE_SamplePage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\AddTapPage.cs" />
     <Compile Include="MasterDetailPages\StartingMasterDetailPage.cs" />
@@ -56,7 +53,6 @@
     <Compile Include="MenuPages\ContactsPage.cs" />
     <Compile Include="MenuPages\MyTabbedPage.cs" />
     <Compile Include="MenuPages\TodoListPage.cs" />
-    <Compile Include="MenuPages\DuplicateContactsPage.cs" />
     <Compile Include="Constants\MyColors.cs" />
     <Compile Include="MenuPages\MyPrayersPage.cs" />
     <Compile Include="MyCustomRenderers\CustomTabbedPage.cs" />
@@ -80,15 +76,6 @@
     <Compile Include="readme.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.2.0.1.6495\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.2.0.1.6495\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform">
-      <HintPath>..\packages\Xamarin.Forms.2.0.1.6495\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -119,6 +106,18 @@
     <Reference Include="Plugin.Connectivity.Abstractions">
       <HintPath>..\packages\Xam.Plugin.Connectivity.2.2.12\lib\portable-net45+wp80+wp81+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+Xamarin.Mac20+UAP10\Plugin.Connectivity.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.2.127\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.2.127\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.2.127\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\portable-net45+wp80+win8+wpa81\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -141,4 +140,5 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.1.6495\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.1.6495\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
 </Project>
