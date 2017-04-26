@@ -10,11 +10,12 @@ namespace ThoughtsAndPrayers
 
 		Label prompt = new Label () { Text = "Update: What your question?                " };
 
-		Editor myQuestion = new Editor {
+		public Editor myQuestion = new Editor {
 			BackgroundColor = MyColors.MyLightPurple
-//			BackgroundColor = Device.OnPlatform (Color.FromHex ("#A4EAFF"), Color.FromHex ("#2c3e50"), Color.FromHex ("#2c3e50")),
-			//MinimumHeightRequest = 200
+			//DELETE_BackgroundColor = Device.OnPlatform (Color.FromHex ("#A4EAFF"), Color.FromHex ("#2c3e50"), Color.FromHex ("#2c3e50")),
+			//DELETE_MinimumHeightRequest = 200
 		};
+
 
 		Label fnPrompt = new Label () { Text = "First Name" };
 
@@ -30,13 +31,19 @@ namespace ThoughtsAndPrayers
 
 		Label mST = new Label () { Text = "What's on your mind?                " };
 
-		Editor mySharedText = new Editor {
+		public Editor mySharedText = new Editor {
 			BackgroundColor = MyColors.MyLightPurple
 		};
 
 		public AddTapPage ()
 		{
 			this.Title = "Add a Prayer Request";
+
+
+			mySharedText.Text = "Hey guys, this is what's going on!";
+
+			mySharedText.Focused += myQuestion_Focused;
+			mySharedText.Unfocused += myQuestion_Unfocused;
 
 			//BUTTON
 			Button submitButton = new StyledButton (StyledButton.Borders.Thin, 1);
@@ -138,20 +145,57 @@ namespace ThoughtsAndPrayers
 				});
 			};
 
+			StackLayout myEnterTextStacklayout = new StackLayout { 
+				//Padding = new Thickness (10, 10, 10, 10),
+				VerticalOptions = LayoutOptions.Start,
+				HorizontalOptions = LayoutOptions.StartAndExpand,
+				Children = {
+					//new Label { Text = "Tell your friends what's on your mind" }, 
+					//prompt, myQuestion, fnPrompt, firstName, lnPrompt, lastName, mST, mySharedText, submitButton, cancelButton
+					//prompt, myQuestion, fnPrompt, firstName, lnPrompt, lastName, 
+					mST, mySharedText
+				}
+			};
+
+
+			StackLayout myButtonStacklayout = new StackLayout {
+				Padding = new Thickness (10, 10, 10, 10),
+				Orientation = StackOrientation.Horizontal,
+				VerticalOptions = LayoutOptions.Start,
+				HorizontalOptions = LayoutOptions.StartAndExpand,
+				Children = { 
+					cancelButton, submitButton
+				}
+			};
+
 
 			Content = new StackLayout {
 				Padding = new Thickness (10, 50, 10, 10),
 				VerticalOptions = LayoutOptions.Start,
 				HorizontalOptions = LayoutOptions.StartAndExpand,
 				Children = {
-					//new Label { Text = "Tell your friends what's on your mind" }, 
-					//prompt, myQuestion, fnPrompt, firstName, lnPrompt, lastName, mST, mySharedText, submitButton, cancelButton
-		//prompt, myQuestion, fnPrompt, firstName, lnPrompt, lastName, 
-					mST, mySharedText, submitButton, cancelButton
-
+					myEnterTextStacklayout, myButtonStacklayout
 
 				}
 			};
+		}
+
+		private void myQuestion_Focused (object sender, FocusEventArgs e) //triggered when the user taps on the Editor to interact with it
+		{
+			if (mySharedText.Text.Equals ("Hey guys, this is what's going on!")) //if you have the placeholder showing, erase it and set the text color to black
+			{
+				mySharedText.Text = "";
+				//myQuestion.TextColor = Color.Black;
+			}
+		}
+
+		private void myQuestion_Unfocused (object sender, FocusEventArgs e) //triggered when the user taps "Done" or outside of the Editor to finish the editing
+		{
+			if (mySharedText.Text.Equals ("")) //if there is text there, leave it, if the user erased everything, put the placeholder Text back and set the TextColor to gray
+			{
+				mySharedText.Text = "Hey guys, this is what's going on!";
+				//mySharedText.TextColor = Color.Gray;
+			}
 		}
 	}
 }

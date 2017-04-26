@@ -1,9 +1,10 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.ComponentModel;
 
 namespace ThoughtsAndPrayers
 {
-	public static class AppConstants
+	public static class AppConstants 
 	{
 		public static bool IsCurrent = false;
 		public static bool NeedsUpdating = false;
@@ -15,6 +16,11 @@ namespace ThoughtsAndPrayers
 
 		public static string FBAccessToken;
 		public static string FBFullName;
+
+
+		//SWITCHER
+
+		public static bool Thought;
 
 	}
 }

@@ -177,11 +177,11 @@ namespace ThoughtsAndPrayers
 	}
 
 
-	class NewNativeCell : ViewCell
+	class NotNewNativeCell : ViewCell
 	{
 		Label firstName, label;
 		StackLayout layout;
-		public NewNativeCell ()
+		public NotNewNativeCell ()
 		{
 			firstName = new Label {
 				//					YAlign = TextAlignment.Center

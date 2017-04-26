@@ -341,7 +341,7 @@ _mono_aot_file_info:
 	.long 32,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 121,130,58,241,208,14,149,130,79,36,86,117,245,226,92,233
+	.byte 223,174,245,135,97,93,200,200,82,217,80,90,190,182,181,182
 	.globl _mono_aot_module_SQLitePCLRaw_batteries_green_info
 	.align 3
 _mono_aot_module_SQLitePCLRaw_batteries_green_info:

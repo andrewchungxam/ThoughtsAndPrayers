@@ -4133,7 +4133,7 @@ _mono_aot_file_info:
 	.long 56,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 61,155,188,128,52,105,64,217,195,192,211,228,232,229,181,172
+	.byte 180,146,136,176,85,202,67,94,34,198,216,83,190,8,138,138
 	.globl _mono_aot_module_ImageCircle_Forms_Plugin_iOS_info
 	.align 3
 _mono_aot_module_ImageCircle_Forms_Plugin_iOS_info:

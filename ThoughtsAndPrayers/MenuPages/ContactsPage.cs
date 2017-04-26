@@ -13,13 +13,13 @@ using Xamarin.Forms;
 namespace ThoughtsAndPrayers
 {
 
-	class newNativeCell : ViewCell
+	class NewNativeCell : ViewCell
 	{
 		Label firstName, label, dateLabel, tempLabel;
 		string localFBString;
 		StackLayout layout;
 
-		public newNativeCell ()
+		public NewNativeCell ()
 		{
 
 			DateTime dt = DateTime.Now;
@@ -30,19 +30,32 @@ namespace ThoughtsAndPrayers
 			//Also above can be done more formally like this:
 			//https://msdn.microsoft.com/en-us/library/cc165448.aspx
 
-			var prayerAction = new MenuItem { Text = "Delete", IsDestructive = true };
-			prayerAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-			prayerAction.Clicked += async (sender, e) => {
-				var mi = ((MenuItem)sender);
-				Debug.WriteLine ("More Context Action clicked: " + ((SurveyQuestion)mi.CommandParameter).SharedText);
-				await App.Service.DeleteSurveyQuestionAsync ((SurveyQuestion)mi.CommandParameter);
-				AppConstants.NeedsUpdating = true;
-				MessagingCenter.Send<object> (this, "RefreshData");
 
-				//AT THE CONTACTS PAGE LEVEL - NEED TO RUN :: PostDeleteActions ();
-			};
+			//get rid of this at the global level
+			//var prayerAction = new MenuItem { Text = "Delete", IsDestructive = true };
+			//prayerAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
+			//prayerAction.Clicked += async (sender, e) => {
+			//	var mi = ((MenuItem)sender);
+			//	Debug.WriteLine ("More Context Action clicked: " + ((SurveyQuestion)mi.CommandParameter).SharedText);
+			//	await App.Service.DeleteSurveyQuestionAsync ((SurveyQuestion)mi.CommandParameter);
+			//	AppConstants.NeedsUpdating = true;
+			//	MessagingCenter.Send<object> (this, "RefreshData");
 
-			var thoughtAction = new MenuItem { Text = "T&P" };//, IsDestructive = true }; // red background
+			//	//AT THE CONTACTS PAGE LEVEL - NEED TO RUN :: PostDeleteActions ();
+			//};
+
+			//HAVE TO SET THE BINDING
+			//var userIntentString = "";
+
+			//if (AppConstants.Thought)
+			//{
+			//	userIntentString = "Thoughts";
+			//} else
+			//{
+			//	userIntentString = "Prayers";
+			//}
+
+			var thoughtAction = new MenuItem { Text = "T&Ps" };//, IsDestructive = true }; // red background
 			thoughtAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
 			thoughtAction.Clicked += async (sender, e) => {
 				var mi = ((MenuItem)sender);
@@ -80,7 +93,8 @@ namespace ThoughtsAndPrayers
 
 			};
 			// add to the ViewCell's ContextActions property
-			ContextActions.Add (prayerAction);
+			//get rid of this at the global level
+			//ContextActions.Add (prayerAction);
 			ContextActions.Add (thoughtAction);
 
 
@@ -229,7 +243,7 @@ namespace ThoughtsAndPrayers
 				BackgroundColor = Color.Transparent,
 				HasUnevenRows = true,
 				ItemTemplate = new DataTemplate (() => {
-					var nativeCell = new newNativeCell ();
+					var nativeCell = new NewNativeCell ();
 					return nativeCell;
 				})
 			};

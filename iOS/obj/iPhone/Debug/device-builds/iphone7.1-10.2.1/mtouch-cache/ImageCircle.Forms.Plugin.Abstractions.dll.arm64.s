@@ -1107,7 +1107,7 @@ _mono_aot_file_info:
 	.long 32,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 90,223,27,188,237,242,116,166,122,212,126,105,67,64,59,229
+	.byte 29,193,248,231,66,11,158,163,103,194,169,122,144,107,254,77
 	.globl _mono_aot_module_ImageCircle_Forms_Plugin_Abstractions_info
 	.align 3
 _mono_aot_module_ImageCircle_Forms_Plugin_Abstractions_info:

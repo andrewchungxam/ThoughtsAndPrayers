@@ -153,7 +153,7 @@ Lme_0:
 	.align 4
 	.no_dead_strip ThoughtsAndPrayers_iOS_Application_Main_string__
 ThoughtsAndPrayers_iOS_Application_Main_string__:
-.file 1 "/Users/andrewc/Projects/aCseFolderProjects/ThoughtsAndPrayers2017/MostAdvanced/ThoughtsAndPrayers/iOS/Main.cs"
+.file 1 "/Users/andrewc/Github/ThoughtsAndPrayers/iOS/Main.cs"
 .loc 1 14 0 prologue_end
 .word 0xa9bc7bfd
 .word 0x910003fd
@@ -249,7 +249,7 @@ Lme_2:
 	.align 4
 	.no_dead_strip ThoughtsAndPrayers_iOS_AppDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_NSDictionary
 ThoughtsAndPrayers_iOS_AppDelegate_FinishedLaunching_UIKit_UIApplication_Foundation_NSDictionary:
-.file 2 "/Users/andrewc/Projects/aCseFolderProjects/ThoughtsAndPrayers2017/MostAdvanced/ThoughtsAndPrayers/iOS/AppDelegate.cs"
+.file 2 "/Users/andrewc/Github/ThoughtsAndPrayers/iOS/AppDelegate.cs"
 .loc 2 25 0 prologue_end
 .word 0xa9b87bfd
 .word 0x910003fd
@@ -590,7 +590,7 @@ Lme_5:
 	.align 4
 	.no_dead_strip ThoughtsAndPrayers_iOS_CustomTabbedPageRenderer__ctor
 ThoughtsAndPrayers_iOS_CustomTabbedPageRenderer__ctor:
-.file 3 "/Users/andrewc/Projects/aCseFolderProjects/ThoughtsAndPrayers2017/MostAdvanced/ThoughtsAndPrayers/iOS/MyCustomRenderers/MyCustomTabbedPage.cs"
+.file 3 "/Users/andrewc/Github/ThoughtsAndPrayers/iOS/MyCustomRenderers/MyCustomTabbedPage.cs"
 .loc 3 29 0 prologue_end
 .word 0xa9bb7bfd
 .word 0x910003fd
@@ -688,7 +688,7 @@ Lme_6:
 	.align 4
 	.no_dead_strip ThoughtsAndPrayers_iOS_UIColorExtensions_FromHex_int
 ThoughtsAndPrayers_iOS_UIColorExtensions_FromHex_int:
-.file 4 "/Users/andrewc/Projects/aCseFolderProjects/ThoughtsAndPrayers2017/MostAdvanced/ThoughtsAndPrayers/iOS/UIColorExtension.cs"
+.file 4 "/Users/andrewc/Github/ThoughtsAndPrayers/iOS/UIColorExtension.cs"
 .loc 4 10 0 prologue_end
 .word 0xa9b87bfd
 .word 0x910003fd
@@ -1687,7 +1687,7 @@ Lme_b:
 	.align 4
 	.no_dead_strip ThoughtsAndPrayers_iOS_iOSFacebookIDImplementation__ctor
 ThoughtsAndPrayers_iOS_iOSFacebookIDImplementation__ctor:
-.file 5 "/Users/andrewc/Projects/aCseFolderProjects/ThoughtsAndPrayers2017/MostAdvanced/ThoughtsAndPrayers/iOS/Services/iOSFacebookIDImplementation.cs"
+.file 5 "/Users/andrewc/Github/ThoughtsAndPrayers/iOS/Services/iOSFacebookIDImplementation.cs"
 .loc 5 13 0 prologue_end
 .word 0xa9bd7bfd
 .word 0x910003fd
@@ -1869,7 +1869,7 @@ Lme_e:
 	.align 4
 	.no_dead_strip ThoughtsAndPrayers_iOS_UserInfo_get_firstname
 ThoughtsAndPrayers_iOS_UserInfo_get_firstname:
-.file 6 "/Users/andrewc/Projects/aCseFolderProjects/ThoughtsAndPrayers2017/MostAdvanced/ThoughtsAndPrayers/iOS/UserInfo.cs"
+.file 6 "/Users/andrewc/Github/ThoughtsAndPrayers/iOS/UserInfo.cs"
 .loc 6 7 0 prologue_end
 .word 0xa9bc7bfd
 .word 0x910003fd
@@ -3964,7 +3964,7 @@ b ThoughtsAndPrayers_iOS_my_iOSLoginProvider__LoginAsyncc__async0_MoveNext
 	.align 4
 	.no_dead_strip ThoughtsAndPrayers_iOS_my_iOSLoginProvider__LoginAsyncc__async0_MoveNext
 ThoughtsAndPrayers_iOS_my_iOSLoginProvider__LoginAsyncc__async0_MoveNext:
-.file 7 "/Users/andrewc/Projects/aCseFolderProjects/ThoughtsAndPrayers2017/MostAdvanced/ThoughtsAndPrayers/iOS/Services/iOSLoginProvider.cs"
+.file 7 "/Users/andrewc/Github/ThoughtsAndPrayers/iOS/Services/iOSLoginProvider.cs"
 .loc 7 21 0 prologue_end
 .word 0xa9af7bfd
 .word 0x910003fd
@@ -33395,7 +33395,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "5E129E89-A2DD-4443-895D-8893FC09137E"
+	.asciz "192905BD-A755-465B-9FAC-34475A920B0B"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -33478,7 +33478,7 @@ _mono_aot_file_info:
 	.long 328,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 150,169,115,175,142,56,72,33,178,151,9,89,146,168,132,91
+	.byte 151,113,222,59,184,41,87,112,98,47,52,5,84,167,23,62
 	.globl _mono_aot_module_ThoughtsAndPrayers_iOS_info
 	.align 3
 _mono_aot_module_ThoughtsAndPrayers_iOS_info:
