@@ -11,7 +11,8 @@ namespace ThoughtsAndPrayers
 		Label prompt = new Label () { Text = "Update: What your question?                " };
 
 		public Editor myQuestion = new Editor {
-			BackgroundColor = MyColors.MyLightPurple
+			BackgroundColor = MyColors.MyLightPurple,
+			HorizontalOptions = LayoutOptions.FillAndExpand
 			//DELETE_BackgroundColor = Device.OnPlatform (Color.FromHex ("#A4EAFF"), Color.FromHex ("#2c3e50"), Color.FromHex ("#2c3e50")),
 			//DELETE_MinimumHeightRequest = 200
 		};
@@ -48,6 +49,7 @@ namespace ThoughtsAndPrayers
 			//BUTTON
 			Button submitButton = new StyledButton (StyledButton.Borders.Thin, 1);
 			submitButton.Text = "Submit";
+			submitButton.HorizontalOptions = LayoutOptions.FillAndExpand;
 			//loginButton.WidthRequest = 50;
 
 			submitButton.Clicked += (sender, e) => {
@@ -130,6 +132,7 @@ namespace ThoughtsAndPrayers
 
 			Button cancelButton = new StyledButton (StyledButton.Borders.Thin, 1);
 			cancelButton.Text = "Cancel";
+			cancelButton.HorizontalOptions = LayoutOptions.FillAndExpand;
 
 			cancelButton.Clicked += (sender, e) => {
 				Device.BeginInvokeOnMainThread (() => {
@@ -148,7 +151,9 @@ namespace ThoughtsAndPrayers
 			StackLayout myEnterTextStacklayout = new StackLayout { 
 				//Padding = new Thickness (10, 10, 10, 10),
 				VerticalOptions = LayoutOptions.Start,
-				HorizontalOptions = LayoutOptions.StartAndExpand,
+//				HorizontalOptions = LayoutOptions.StartAndExpand,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+
 				Children = {
 					//new Label { Text = "Tell your friends what's on your mind" }, 
 					//prompt, myQuestion, fnPrompt, firstName, lnPrompt, lastName, mST, mySharedText, submitButton, cancelButton
@@ -162,7 +167,9 @@ namespace ThoughtsAndPrayers
 				Padding = new Thickness (10, 10, 10, 10),
 				Orientation = StackOrientation.Horizontal,
 				VerticalOptions = LayoutOptions.Start,
-				HorizontalOptions = LayoutOptions.StartAndExpand,
+//				HorizontalOptions = LayoutOptions.StartAndExpand,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+
 				Children = { 
 					cancelButton, submitButton
 				}
@@ -172,7 +179,8 @@ namespace ThoughtsAndPrayers
 			Content = new StackLayout {
 				Padding = new Thickness (10, 50, 10, 10),
 				VerticalOptions = LayoutOptions.Start,
-				HorizontalOptions = LayoutOptions.StartAndExpand,
+//				HorizontalOptions = LayoutOptions.StartAndExpand,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
 				Children = {
 					myEnterTextStacklayout, myButtonStacklayout
 

@@ -165,7 +165,7 @@ namespace ThoughtsAndPrayers
 
 			Label numPeopleThinkingOfMe = new Label {
 
-				Text = "People Thinking of me:20"
+				Text = "People Thinking of me: 20"
 			};
 
 
@@ -207,7 +207,7 @@ namespace ThoughtsAndPrayers
 				//BackgroundColor = Color.Gray,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				VerticalOptions = LayoutOptions.StartAndExpand,
-				Padding = new Thickness (10, 10, 10, 10),
+				Padding = new Thickness (10, 15, 10, 10),
 				Children = {
 
 					numPrayerRequests, numMyPrayers, numMyThoughts, 

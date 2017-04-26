@@ -222,27 +222,27 @@
 		</data>
 		<key>.monotouch-64/ThoughtsAndPrayers.arm64.aotdata</key>
 		<data>
-		szt7cGKH8rXOeKShpPh1e4RldT4=
+		LFJp1/1xdMjJvTB/JgqYw4vEmHY=
 		</data>
 		<key>.monotouch-64/ThoughtsAndPrayers.dll</key>
 		<data>
-		9jbHaf7WshmxKxVZvVWo5x3XpGo=
+		lF331xl72oNNXMy3T0QSqR5FT3M=
 		</data>
 		<key>.monotouch-64/ThoughtsAndPrayers.dll.mdb</key>
 		<data>
-		Et1p7veMB2fq7X0k2fSZbDaBglM=
+		UOrN6n63a4t32OvhH0LGgcQ50Gg=
 		</data>
 		<key>.monotouch-64/ThoughtsAndPrayers.iOS.arm64.aotdata</key>
 		<data>
-		QHtFkLYwPYxIu/LUa+kJLgwgp88=
+		vbBbreQusSokAbTQvDw6Sr+2DAs=
 		</data>
 		<key>.monotouch-64/ThoughtsAndPrayers.iOS.exe</key>
 		<data>
-		omt9zxyPJjMjtChGsLpO5b9SL8g=
+		qPLUUMgHIQZAdw4CbJlwaEeeZqM=
 		</data>
 		<key>.monotouch-64/ThoughtsAndPrayers.iOS.exe.mdb</key>
 		<data>
-		hEUZ9xGWsjvaH7pNZ+vowSNkeVw=
+		p4OSNVSNSG6ZZ77pA08gaHVPYJ8=
 		</data>
 		<key>.monotouch-64/Xamarin.Forms.Core.arm64.aotdata</key>
 		<data>
@@ -438,7 +438,7 @@
 		</data>
 		<key>.uploaded</key>
 		<data>
-		ww9lUxbIg3Um4FBVn//mXP/Oui8=
+		1bUt4klBRT6uY8cqfU3Sbf+sar8=
 		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
@@ -1042,11 +1042,11 @@
 		</data>
 		<key>libThoughtsAndPrayers.dll.dylib</key>
 		<data>
-		t5hlS/0hiUrDkZiaV54UvBIpquk=
+		603wSvfog5U7BqFTbS3+AsSDk4g=
 		</data>
 		<key>libThoughtsAndPrayers.iOS.exe.dylib</key>
 		<data>
-		YasF1ea4p53xx9mmaEL/2Z03Ukw=
+		iOlWQAO53s9BI4X+9lHvdvKJNNw=
 		</data>
 		<key>libXamarin.Forms.Core.dll.dylib</key>
 		<data>
@@ -1737,66 +1737,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			szt7cGKH8rXOeKShpPh1e4RldT4=
+			LFJp1/1xdMjJvTB/JgqYw4vEmHY=
 			</data>
 			<key>hash2</key>
 			<data>
-			VoE6fyTW5TJKSzFyVEIgtKOc2cwOTShjDzUdKrV//Yo=
+			oHx1YCUPnUzawTpUbzj+MToLYGVIJFV9G7D0NKNawj0=
 			</data>
 		</dict>
 		<key>.monotouch-64/ThoughtsAndPrayers.dll</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9jbHaf7WshmxKxVZvVWo5x3XpGo=
+			lF331xl72oNNXMy3T0QSqR5FT3M=
 			</data>
 			<key>hash2</key>
 			<data>
-			xtjgb3S4f4BN0hcpQJ2CX2sdzS1UIjRemChB/Z7NR8E=
+			ZdtD9XnOlAJ5bgxCmy7GTFzfxXHd0wJAbPvgsqBof54=
 			</data>
 		</dict>
 		<key>.monotouch-64/ThoughtsAndPrayers.dll.mdb</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Et1p7veMB2fq7X0k2fSZbDaBglM=
+			UOrN6n63a4t32OvhH0LGgcQ50Gg=
 			</data>
 			<key>hash2</key>
 			<data>
-			/DH48epHz6Fb9XHGvgImD4bl3PVaa1gdI2+nDe8gtyY=
+			9a6QGWM2Zbemct5HjYApJ/bZ/x26mqAZ9pHqAlpNVsc=
 			</data>
 		</dict>
 		<key>.monotouch-64/ThoughtsAndPrayers.iOS.arm64.aotdata</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QHtFkLYwPYxIu/LUa+kJLgwgp88=
+			vbBbreQusSokAbTQvDw6Sr+2DAs=
 			</data>
 			<key>hash2</key>
 			<data>
-			zhlPI0ltZyi/2sOtwI50t55RVQvXSK1JDjaan+wA+2U=
+			osy5j0WasXO3+hUaLX1t9I66wulx/3V4rZ/GHfMbevY=
 			</data>
 		</dict>
 		<key>.monotouch-64/ThoughtsAndPrayers.iOS.exe</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			omt9zxyPJjMjtChGsLpO5b9SL8g=
+			qPLUUMgHIQZAdw4CbJlwaEeeZqM=
 			</data>
 			<key>hash2</key>
 			<data>
-			2cIKwzxoYy84Jb9p9AXbppbYI25jnN5m+Wyyj6GOcqU=
+			R5HsV1sSJM3EUD572Mdq1qsbt8rUqDc7uC0stqLi8Hs=
 			</data>
 		</dict>
 		<key>.monotouch-64/ThoughtsAndPrayers.iOS.exe.mdb</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hEUZ9xGWsjvaH7pNZ+vowSNkeVw=
+			p4OSNVSNSG6ZZ77pA08gaHVPYJ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			5qOD6Ee8Ph2Vay8K6pfXdT4bs8hy8FWeu9TQgOtzq00=
+			RjCmeAD7KASZubBv4WKOHDZIDU8k2WevlTpDXamiEoI=
 			</data>
 		</dict>
 		<key>.monotouch-64/Xamarin.Forms.Core.arm64.aotdata</key>
@@ -2331,11 +2331,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ww9lUxbIg3Um4FBVn//mXP/Oui8=
+			1bUt4klBRT6uY8cqfU3Sbf+sar8=
 			</data>
 			<key>hash2</key>
 			<data>
-			03KEYl61m8jq0BDf9Nv3iOVYSXHVXqXyfr/dxdECn7M=
+			sccBlyGF5deb9x4MixDevhGS0AHzBM1UtWNSTLoSTAo=
 			</data>
 		</dict>
 		<key>Default-568h@2x.png</key>
@@ -3453,22 +3453,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			t5hlS/0hiUrDkZiaV54UvBIpquk=
+			603wSvfog5U7BqFTbS3+AsSDk4g=
 			</data>
 			<key>hash2</key>
 			<data>
-			7DJmvIlhVnNQtZCLvZ5IhUzRSIJfVhKAN1IwbviWvh4=
+			5etSlz//+gJ9/rxAsaJk9YgjyjL1vwKNGEbpIfDGpVE=
 			</data>
 		</dict>
 		<key>libThoughtsAndPrayers.iOS.exe.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YasF1ea4p53xx9mmaEL/2Z03Ukw=
+			iOlWQAO53s9BI4X+9lHvdvKJNNw=
 			</data>
 			<key>hash2</key>
 			<data>
-			vvZIw2BdhvMyxYQIlgaRppwXEc5I+kuJPD1vppMPTGM=
+			di33pe+7GHycN92nX75NgAb0oEOq3Dm2hTLUsJdG/VA=
 			</data>
 		</dict>
 		<key>libXamarin.Forms.Core.dll.dylib</key>
